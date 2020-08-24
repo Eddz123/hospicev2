@@ -1,0 +1,168 @@
+extends ../../templates/layout
+
+block content
+    .container.content-area
+        .side-app
+            // page-header
+            .page-header
+                ol.breadcrumb
+                    // breadcrumb
+                    li.breadcrumb-item
+                        a(href='/staff') Home
+                    li.breadcrumb-item.active(aria-current='page') Staff
+                // End breadcrumb
+            // End page-header
+            .row
+                .col-xl-12.col-lg-12.col-md-12
+                    .card
+                        .card-body
+                            .panel.panel-primary
+                                .tab-menu-heading
+                                    .tabs-menu1
+                                        // Tabs
+                                        ul.nav.panel-tabs
+                                            li
+                                                a.active(href='#tab1' data-toggle='tab') ADD / UPDATE VENDOR
+
+
+                                .panel-body.tabs-menu-body
+                                    .tab-content
+                                        #tab1.tab-pane.active
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+
+                                                            td.text-right
+                                                                a.btn.btn-app.btn-success.mr-2.mt-1.mb-1(href='#')
+                                                                    i.fa.fa-save
+                                                                    |  Save
+                                                                a.btn.btn-app.btn-danger.mr-2.mt-1.mb-1(href='/staff')
+                                                                    i.fa.fa-times
+                                                                    |  Cancel
+
+
+                                            br
+                                            br
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+                                                            td.bg-blue-dark.text-white
+                                                                h4
+                                                                    strong &#x2776; VENDOR INFORMATION FORM
+
+
+                                            br
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+                                                            td
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label COMPANY NAME
+                                                                            input.form-control(type='text' name='vendorcompanyname' placeholder='Enter VENDOR COMPANY NAME' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label CONTROL NUMBER
+                                                                            input.form-control(type='text' name='vendorcontrolno' value='' disabled)
+                                                                .row
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label STREET / UNIT NUMBER
+                                                                            input.form-control(type='text' name='vendorstreet' placeholder='Enter STREET / UNIT NUMBER ' value='' required)
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label CITY
+                                                                            input.form-control(type='text' name='vendorcity' placeholder='Enter CITY' value='')
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label STATE
+                                                                            input.form-control(type='text' name='vendorstate' placeholder='Enter STATE' value='')
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label ZIP
+                                                                            input.form-control(type='text' name='vendorzip' placeholder='Enter ZIP' value='')
+                                                                .row
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label PHONE NUMBER
+                                                                            input.form-control(type='text' name='vendorphoneno' placeholder='Enter PHONE NUMBER' value='' required)
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label TELEPHONE NUMBER
+                                                                            input.form-control(type='text' name='vendortelephoneno' placeholder='Enter TELEPHONE NUMBER' value='' required)
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label FAX NUMBER
+                                                                            input.form-control(type='tel' name='vendorfaxno' placeholder='Enter FAX NUMBER' value='' required)
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label EMAIL ADDRESS 1
+                                                                            input.form-control(type='text' name='vendoremailaddress1' placeholder='Enter EMAIL ADDRESS 1' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label EMAIL ADDRESS 2 ( OPTIONAL )
+                                                                            input.form-control(type='text' name='vendoremailaddress2' placeholder='Enter EMAIL ADDRESS 2' value='')
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label CONTACT PERSON 1
+                                                                            input.form-control(type='text' name='vendorcontactperson1' placeholder='Enter CONTACT PERSON 1' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label CONTACT PERSON 2 ( OPTIONAL )
+                                                                            input.form-control(type='text' name='vendorcontactperson2' placeholder='Enter CONTACT PERSON 2' value='' required)
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label NPI NUMBER
+                                                                            input.form-control(type='text' name='vendornpinumber' placeholder='Enter NPI NUMBER' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label NPI EXPIRATION DATE
+                                                                            .input-group
+                                                                                .input-group-prepend
+                                                                                    .input-group-text
+                                                                                        i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' name='vendornpiexpdate' required)
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label BUS LICENSED NUMBER
+                                                                            input.form-control(type='text' name='vendorbuslicensedno' placeholder='Enter BUS LICENSED NUMBER' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label BUS LICENSED EXPIRATION DATE
+                                                                            .input-group
+                                                                                .input-group-prepend
+                                                                                    .input-group-text
+                                                                                        i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' name='vendorbuslicensedexpdate' required)
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label INSURANCE
+                                                                            input.form-control(type='text' name='vendorinsurance' placeholder='Enter INSURANCE' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label INSURANCE EXPIRATION DATE
+                                                                            .input-group
+                                                                                .input-group-prepend
+                                                                                    .input-group-text
+                                                                                        i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' name='vendorinsuranceexpdate' required)
+
+
+
+
+

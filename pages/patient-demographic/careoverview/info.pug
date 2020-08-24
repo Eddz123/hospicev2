@@ -1,0 +1,371 @@
+extends ../../../templates/layout
+
+block content
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='/nursing/assessment-list') Home
+            li.breadcrumb-item.active(aria-current='page') Care Overview
+        // End breadcrumb
+    // End page-header
+    .row
+        .card.card-collapsed
+            .card-header
+                h3.card-title Patient Information
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+                .table-responsive
+                    table.table.table-striped.table-bordered.text-nowrap
+                        thead
+                            tr
+
+                                th PATIENT ID
+                                th PATIENT NAME
+                                th PATIENT AGE
+                                th PATIENT BIRTHDATE
+                                th PATIENT ADDRESS
+                                th CONTACT NO
+                                th PATIENT STATUS
+
+                        tbody
+                            tr
+
+                                td
+                                td
+                                td
+                                td 
+                                td
+                                td
+                                td
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Physician
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+                .table-responsive
+                    table.table.table-striped.table-bordered.text-nowrap
+                        thead
+                            tr
+
+                                th PHYSICIAN ID
+                                th PHYSICIAN NAME
+                                th PHYSICIAN PHONE
+                                th PHYSICIAN FAX
+                                th NPI NO
+                                th REFERRING MD / PCP 
+
+
+                        tbody
+                            tr
+
+                                td
+                                td
+                                td
+                                td 
+                                td
+                                td
+
+
+
+
+
+
+
+                                    
+        .card.card-collapsed
+            .card-header
+                h3.card-title Vendors
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+                .table-responsive
+                    table.table.table-striped.table-bordered.text-nowrap
+                        thead
+                            tr
+
+                                th VENDOR ID
+                                th VENDOR NAME
+                                th VENDOR ADDRESS
+                                th VENDOR PHONE
+                                th VENDOR FAX
+
+
+                        tbody
+                            tr
+
+                                td
+                                td
+                                td
+                                td
+                                td
+                                
+        .card.card-collapsed
+            .card-header
+                h3.card-title Admission
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+                .table-responsive
+                    table.table.table-striped.table-bordered.text-nowrap
+                        thead
+                            tr
+
+                                th SECTION
+                                th SECTION DATE
+                                th SECTION STAFF
+                                th STATUS
+
+
+
+                        tbody
+                            tr
+
+                                td
+                                td
+                                td
+                                td
+                                
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Level Of Care
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Assessment
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Tx / Med / Dme
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+                table.table.table-striped.table-bordered.text-nowrap
+                    thead
+                        tr
+
+                            th ORDER DATE
+                            th START DATE
+                            th STOP DATE
+                            th TYPE
+                            th ITEM
+                            th ITEM
+                            th QUANTITY
+                            th INDICATION
+                            th PAYER
+                            th VENDOR
+
+                    tbody
+                        tr
+
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title IDG
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title POC
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Issue / Outcome
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Certification  ( CTI )
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Visit Notes  ( MD )
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Health Aide ( HA )
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Volunteer
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Communication / Progress Log
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Document / Image
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Discharge
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Bereavement
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Compliance
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+
+
+
+        .card.card-collapsed
+            .card-header
+                h3.card-title Incident / Occurence
+                .card-options
+                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                        i.fe.fe-chevron-up
+                    a.card-options-remove(href='#' data-toggle='card-remove')
+                        i.fe.fe-x
+            .card-body
+

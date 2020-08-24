@@ -1,0 +1,75 @@
+extends ../../../templates/layout
+
+block content
+
+
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') Bereavement Letter
+            li.breadcrumb-item.active(aria-current='page') New Bereavement Letter
+        // End breadcrumb
+        .ml-auto
+            .input-group
+                a.btn.btn-success.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-plus
+                        |  Save Assessment
+                a.btn.btn-danger.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-trash
+                        |  Delete
+                a.btn.btn-primary.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-backward
+                        |  Back
+    // End page-header
+
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title Bereavement Letter Assessment
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-6
+                            .form-group
+                                label.form-label Entered By :
+                                select#select-countries.form-control.custom-select(name="Select")
+                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                        .col-md-6
+                            .form-group
+                                label.form-label Staff Assigned
+                                select#select-countries.form-control.custom-select(name="Select")
+                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+
+                    
+
+
+
+    .row
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Bereavement Maker
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    
+
+

@@ -1,0 +1,147 @@
+.app-sidebar__overlay(data-toggle='sidebar')
+aside.app-sidebar.toggle-sidebar
+    .app-sidebar__user.pb-0
+        .user-body
+            span.avatar.avatar-xxl.brround.text-center.cover-image(data-image-src='../assets/images/users/female/33.png')
+        .user-info
+            a.ml-2(href='/(:no)')
+                span.text-dark.app-sidebar__user-name.font-weight-semibold Patient Name
+                br
+                span.app-sidebar__user-name.text-sm  Male, 10/25/1995
+                br 
+                span.app-sidebar__user-name.text-sm  Web Designer
+    //- .tab-menu-heading.siderbar-tabs.border-0.p-0
+    //-     .tabs-menu
+    //-         // Tabs
+    //-         ul.nav.panel-tabs
+    //-             li
+    //-                 a.active(href='#index1', data-toggle='tab')
+    //-                     i.fa.fa-home.fs-17
+    //-             li
+    //-                 a(href='#index2', data-toggle='tab')
+    //-                     i.fa.fa-envelope.fs-17
+    //-             li
+    //-                 a(href='#index3', data-toggle='tab')
+    //-                     i.fa.fa-user.fs-17
+    //-             li
+    //-                 a(href='login.html', title='logout')
+    //-                     i.fa.fa-power-off.fs-17
+    .panel-body.tabs-menu-body.side-tab-body.p-0.border-0
+        .tab-content
+            #index1.tab-pane.active
+                ul.side-menu.toggle-menu
+                    li.slide
+                        a.side-menu__item(data-toggle='slide', href='#')
+                            i.side-menu__icon.typcn.typcn-device-desktop
+                            span.side-menu__label Admission
+                            i.angle.fa.fa-angle-right
+                        ul.slide-menu
+                            li
+                                a.slide-item(href='/0000019-009A/consent')
+                                    span Consent
+                            li
+                                a.slide-item(href='/0000019-009A/staff-assignment')
+                                    span Staff Assignment
+                            li
+                                a.slide-item(href='/0000019-009A/chart-checklist')
+                                    span Chart Check List
+                    li.slide
+                            a.side-menu__item(data-toggle='slide', href='#')
+                                i.side-menu__icon.typcn.typcn-device-desktop
+                                span.side-menu__label Assessment & Visits
+                                i.angle.fa.fa-angle-right
+                            ul.slide-menu
+                                li
+                                    a.slide-item(href='/0000019-009A/nursing-assessment')
+                                        span Nursing
+                                li
+                                    a.slide-item(href='/0000019-009A/spiritual-assessment')
+                                        span Spiritual
+                                li
+                                    a.slide-item(href='/0000019-009A/psychosocial-assessment')
+                                        span Psychosocial
+                                li
+                                    a.slide-item(href='/0000019-009A/visitnotes-assessment')
+                                        span Visitnotes
+                                li
+                                    a.slide-item(href='/0000019-009A/mdf2f-assessment')
+                                        span MD F2F/Visit Notes 
+                                li
+                                    a.slide-item(href='/0000019-009A/ha-visitnotes-assessment')
+                                        span HA Visits 
+                                li
+                                    a.slide-item(href='/0000019-009A/volunteer-assessment')
+                                        span Volunteer Visit  
+                    li.slide
+                        a.side-menu__item(data-toggle='slide', href='#')
+                            i.side-menu__icon.typcn.typcn-device-desktop
+                            span.side-menu__label Idg & Poc
+                            i.angle.fa.fa-angle-right
+                        ul.slide-menu
+                            li
+                                a.slide-item(href='/0000019-009A/idg-assessment')
+                                    span Idg
+                            li
+                                a.slide-item(href='/0000019-009A/poc-assessment')
+                                    span Poc
+                            li
+                                a.slide-item(href='/0000019-009A/poc-list')
+                                    span Poc List
+                    li.slide
+                        a.side-menu__item(data-toggle='slide', href='#')
+                            i.side-menu__icon.typcn.typcn-device-desktop
+                            span.side-menu__label Compliance
+                            i.angle.fa.fa-angle-right
+                        ul.slide-menu
+                            li
+                                a.slide-item(href='/0000019-009A/Lcd-Eligibility')
+                                    span Lcd Eligibility
+                            li
+                                a.slide-item(href='/0000019-009A/His-Admission')
+                                    span His Admission
+                            li
+                                a.slide-item(href='/0000019-009A/His-Discharge')
+                                    span His Discharge
+                            li
+                                a.slide-item(href='/0000019-009A/His-Discharge')
+                                    span Decline Of Status
+                    li.slide
+                        a.side-menu__item(data-toggle='slide', href='#')
+                            i.side-menu__icon.typcn.typcn-device-desktop
+                            span.side-menu__label Bereavement
+                            i.angle.fa.fa-angle-right
+                        ul.slide-menu
+                            li
+                                a.slide-item(href='/0000019-009A/Initial-Bereavement-Assessment')
+                                    span Initial Bereavement Assessment
+                            li
+                                a.slide-item(href='/0000019-009A/Bereavement-Poc')
+                                    span Bereavement Poc
+                            li
+                                a.slide-item(href='/0000019-009A/Bereavement-Letters')
+                                    span Bereavement Letters
+                            li
+                                a.slide-item(href='/0000019-009A/Bereavement-Post-Death-Assessment')
+                                    span Bereavement Post Death Assessment
+                            li
+                                a.slide-item(href='/0000019-009A/Bereavement-Post-Death-Support')
+                                    span Bereavement Post Death Support
+                    li.slide
+                        a.side-menu__item(data-toggle='slide', href='#')
+                            i.side-menu__icon.typcn.typcn-device-desktop
+                            span.side-menu__label Care Overview
+                            i.angle.fa.fa-angle-right
+                        ul.slide-menu
+                            li
+                                a.slide-item(href='/0000019-009A/Care-Overview')
+                                    span Care Overview
+
+                    li.slide
+                        a.side-menu__item(data-toggle='slide', href='#')
+                            i.side-menu__icon.typcn.typcn-device-desktop
+                            span.side-menu__label Medication
+                            i.angle.fa.fa-angle-right
+                        ul.slide-menu
+                            li
+                                a.slide-item(href='/0000019-009A/Medication')
+                                    span Medication

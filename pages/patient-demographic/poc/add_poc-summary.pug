@@ -1,0 +1,436 @@
+extends ../../../templates/layout
+
+block content
+
+
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') Home
+            li.breadcrumb-item.active(aria-current='page') Poc Summary Assessment
+        // End breadcrumb
+        .ml-auto
+            .input-group
+                a.btn.btn-success.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-plus
+                        |  Save Assessment
+                a.btn.btn-danger.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-trash
+                        |  Delete
+                a.btn.btn-primary.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-backward
+                        |  Back
+    // End page-header
+
+    .row
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title CPR Preference / CARE LEVEL
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+
+
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title FUNCTIONAL LIMITATION / ADL Need
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title ACTIVITIES PERMITTED
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title MENTAL STATUS
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title DISASTER TRIAGE
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title FOCUS AREA
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title DIET
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title MEDICATION
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title TREATMENT
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+                    
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title OTHERS
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title DME
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title SUPPLIES
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title LAB
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title FREQUENCY OF VISIT
+
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+

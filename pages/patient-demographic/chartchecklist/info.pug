@@ -1,0 +1,46 @@
+extends ../../../templates/layout
+
+block content
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='/nursing/assessment-list') HOME
+            li.breadcrumb-item.active(aria-current='page') CHART CHECKLIST
+        // End breadcrumb
+    // End page-header
+
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header.custom-header
+                    div
+                        h3.card-title CHART CHECKLIST
+
+                .card-body
+                    .table-responsive
+                        table.table.table-bordered.text-nowrap.mb-0
+                            thead
+                                tr
+                                    th MODULES
+                                    th STATUS
+                            tbody
+                                tr
+                                    td
+                                        a(href='#') CONSENT
+                                    td
+                                        span.badge.badge-info NOT SAVED
+                                tr
+                                    td
+                                        a(href='#') NURSING ASSESSMENT
+                                    td
+                                        span.badge.badge-danger PENDING
+
+
+
+
+
+
+

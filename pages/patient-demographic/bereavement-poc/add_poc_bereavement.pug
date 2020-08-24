@@ -1,0 +1,552 @@
+extends ../../../templates/layout
+
+block content
+
+
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') Bereavement Poc Assessment
+            li.breadcrumb-item.active(aria-current='page') New Bereavement Poc Assessment
+        // End breadcrumb
+        .ml-auto
+            .input-group
+                a.btn.btn-success.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-plus
+                        |  Save Assessment
+                a.btn.btn-danger.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-trash
+                        |  Delete
+                a.btn.btn-primary.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-backward
+                        |  Back
+    // End page-header
+
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title Attach Document
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-12
+                            .form-group
+                                input.dropify(type='file')
+
+
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title Volunteer Visit Notes Assessment
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-4
+                            .form-group
+                                label.form-label ENTERED BY
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label CARE LEVEL
+                                select#select-countries.form-control.custom-select(name="Select")
+                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                            .form-group
+                                label.form-label TIME IN
+                                input.form-control(type='text' name='example-disabled-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label STAFF ASSIGNED
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label TYPE OF
+                                select#select-countries.form-control.custom-select(name="Select")
+                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                            .form-group
+                                label.form-label TIME OUT
+                                input.form-control(type='text' name='example-disabled-input' )
+                        .col-md-4
+                            .form-group
+                                label.form-label DISCIPLINE
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label VISIT
+                                select#select-countries.form-control.custom-select(name="Select")
+                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                            .form-group
+                                label.form-label OVERALL DURATION
+                                input.form-control(type='text' name='example-disabled-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label VISIT DATE
+                                .input-group
+                                    .input-group-prepend
+                                        .input-group-text
+                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                    input.form-control.fc-datepicker(placeholder='MM / DD / YYYY' type='text')
+                        .col-md-8
+                            .form-group
+                                label.form-label SPECIFY
+                                input.form-control(type='text' name='example-text-input')
+
+                            br
+                            br
+
+
+                        .col-md-12
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title 1. PRIMARY BEREAVED
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                        a.card-options-remove(href='#' data-toggle='card-remove')
+                                            i.fe.fe-x
+                                .card-body
+                                    .row
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label LAST NAME
+                                                input.form-control(type='text' name='example-text-input')
+                                            .form-group
+                                                label.form-label ADDRESS
+                                                input.form-control(type='text' name='example-disabled-input')
+                                            .form-group
+                                                label.form-label HOME PHONE NO
+                                                input.form-control(type='text' name='example-disabled-input')
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label FIRST NAME
+                                                input.form-control(type='text' name='example-text-input')
+                                            .form-group
+                                                label.form-label CITY
+                                                input.form-control(type='text' name='example-disabled-input')
+                                            .form-group
+                                                label.form-label WORK PHONE NO
+                                                input.form-control(type='text' name='example-disabled-input')
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label LAST NAME
+                                                input.form-control(type='text' name='example-text-input')
+                                            .form-group
+                                                label.form-label STATE
+                                                input.form-control(type='text' name='example-disabled-input')
+                                            .form-group
+                                                label.form-label CELL PHONE NO
+                                                input.form-control(type='text' name='example-disabled-input')
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label GENDER
+                                                select#select-countries.form-control.custom-select(name="Select")
+                                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                                            .form-group
+                                                label.form-label ZIP CODE
+                                                input.form-control(type='text' name='example-disabled-input')
+                                            .form-group
+                                                label.form-label RELATIONSHIP TO PATIENT
+                                                input.form-control(type='text' name='example-disabled-input')
+                                        .col-md-6
+                                            .form-group
+                                                label.form-label WAS THE BEREAVED PATIENT'S PRIMARY CAREGIVER
+                                                select#select-countries.form-control.custom-select(name="Select")
+                                                    option(value="br" selected="") Select
+                                                    option(value="cz") YES
+                                                    option(value="cz") NO
+
+
+
+
+                        .col-md-12
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title 2. ADDITIONAL BEREAVEMENT ( IF APPLICABLE )
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                        a.card-options-remove(href='#' data-toggle='card-remove')
+                                            i.fe.fe-x
+                                .card-body
+                                    .col-md-12
+                                        .row
+                                            .col-md-6
+                                                .table-responsive
+                                                    table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                        thead.bg-azure.text-white
+                                                            tr
+                                                                th.text-white
+                                                                    .row
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label NAME
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label RELATIONSHIP TO PATIENT
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                    .row
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label ADDRESS
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label PHONE NUMBER
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                    .row
+                                                                        .col-md-12
+                                                                            .form-group
+                                                                                label.form-label SPECIFY
+                                                                                input.form-control(type='text' name='example-text-input')
+
+
+                                            .col-md-6
+                                                .table-responsive
+                                                    table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                        thead.bg-azure.text-white
+                                                            tr
+                                                                th.text-white
+                                                                    .row
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label NAME
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label RELATIONSHIP TO PATIENT
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                    .row
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label ADDRESS
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label PHONE NUMBER
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                    .row
+                                                                        .col-md-12
+                                                                            .form-group
+                                                                                label.form-label SPECIFY
+                                                                                input.form-control(type='text' name='example-text-input')
+                                    br
+                                    .col-md-12
+                                        .row
+                                            .col-md-6
+                                                .table-responsive
+                                                    table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                        thead.bg-azure.text-white
+                                                            tr
+                                                                th.text-white
+                                                                    .row
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label NAME
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label RELATIONSHIP TO PATIENT
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                    .row
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label ADDRESS
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label PHONE NUMBER
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                    .row
+                                                                        .col-md-12
+                                                                            .form-group
+                                                                                label.form-label SPECIFY
+                                                                                input.form-control(type='text' name='example-text-input')
+
+                                            .col-md-6
+                                                .table-responsive
+                                                    table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                        thead.bg-azure.text-white
+                                                            tr
+                                                                th.text-white
+                                                                    .row
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label NAME
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label RELATIONSHIP TO PATIENT
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                    .row
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label ADDRESS
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                        .col-md-6
+                                                                            .form-group
+                                                                                label.form-label PHONE NUMBER
+                                                                                input.form-control(type='text' name='example-text-input')
+                                                                    .row
+                                                                        .col-md-12
+                                                                            .form-group
+                                                                                label.form-label SPECIFY
+                                                                                input.form-control(type='text' name='example-text-input')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        .col-md-12
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title 3. LOW RISK
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                        a.card-options-remove(href='#' data-toggle='card-remove')
+                                            i.fe.fe-x
+                                .card-body
+                                    .table-responsive
+                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                            thead.bg-success.text-white
+                                                tr
+                                                    th.text-white.text-center   INTERVENTIONS
+
+                                            tbody
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label POST DEATH SYMPATHY CARD
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label POST DEATH BEREAVEMENT ASSESSMENT
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label PROVIDE STANDARD POST DEATH BEREAVEMENT MAILINGS
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label ENCOURAGE / SUPPORT EXPRESSION OF GRIEF
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label OTHER INTERVENTIONS SPECIFY 
+                                                                .form-group
+                                                                    input.form-control(type='text' name='example-text-input')
+                                                                    
+                                    .table-responsive
+                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                            thead.bg-success.text-white
+                                                tr
+                                                    th.text-white.text-center GOAL
+
+                                            tbody
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    input.form-control(type='text' name='example-text-input')
+                                    .table-responsive
+                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                            thead.bg-success.text-white
+                                                tr
+                                                    th.text-white.text-center ACTION PLAN
+
+                                            tbody
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label 2 MONTH BEREAVEMENT STAFF CALL
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label CONDOLENCE CARD AFTER IDT
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label 1 MONTH LETTER
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label 3 MONTH LETTER
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label CONDOLENCE CALL - LIVE - CHART
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label 6 MONTHS LETTER
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label 8 MONTHS LETTER
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label 9 MONTHS LETTER
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label 12 MONTHS LETTER
+                                                tr
+
+                                                    td
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    .custom-controls-stacked
+                                                                        label.custom-control.custom-checkbox
+                                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                            span.custom-control-label 13 MONTHS LETTER
+
+
+
+                        .col-md-12
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title 4. NARRATIVE
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                        a.card-options-remove(href='#' data-toggle='card-remove')
+                                            i.fe.fe-x
+                                .card-body
+                                    .col-md-12
+                                        .row
+                                            .col-md-12
+                                                .table-responsive
+                                                    table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                        thead.bg-teal.text-white
+                                                            tr
+                                                                th.text-white
+                                                                    .row
+                                                                        .col-md-12
+                                                                            .form-group
+                                                                                label.form-label NARATIVE REPORT
+                                                                                input.form-control(type='text' name='example-text-input')
+
+
+
+
+
+
+
+

@@ -1,0 +1,302 @@
+extends ../../../templates/layout
+
+block content
+
+
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') MEDICATION
+            li.breadcrumb-item.active(aria-current='page') ADD UPDATE NEW MEDICATION
+        // End breadcrumb
+        .ml-auto
+            .input-group
+                a.btn.btn-success.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-plus
+                        |  Save Assessment
+                a.btn.btn-danger.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-trash
+                        |  Delete
+                a.btn.btn-primary.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-backward
+                        |  Back
+    // End page-header
+
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title Attach Document
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-12
+                            .form-group
+                                input.dropify(type='file')
+
+
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title MEDICATION
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-4
+                            .form-group
+                                label.form-label Entered By :
+                                input.form-control(type='text' name='example-text-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label Ordered By
+                                input.form-control(type='text' name='example-text-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label Order Date
+                                input.form-control(type='text' name='example-text-input')
+
+                        .col-md-12
+                            .table-responsive
+                                table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                    thead
+                                        tr
+                                            th
+                                                .table-responsive
+                                                    table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                        thead.bg-success.text-white
+                                                            tr
+                                                                th.text-white.text-center Enter New Order or View Current Order
+                                                br
+                                                .row
+                                                    .col-md-2
+                                                        .form-group
+                                                            label.form-label Type Of Visit
+                                                            select#select-countries.form-control.custom-select(name="Select")
+                                                                option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                                                option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                                                option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                                                    .col-md-2
+                                                        .form-group
+                                                            label.form-label
+                                                            br
+                                                            select#select-countries.form-control.custom-select(name="Select")
+                                                                option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                                                option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                                                option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                                                    .col-md-2
+                                                        .form-group
+                                                            label.form-label PAYER
+                                                            select#select-countries.form-control.custom-select(name="Select")
+                                                                option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                                                option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                                                option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                                                    .col-md-2
+                                                        .form-group
+                                                            label.form-label VENDOR
+                                                            select#select-countries.form-control.custom-select(name="Select")
+                                                                option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                                                option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                                                option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                                                    .col-md-4
+                                                        .form-group
+                                                            label.form-label ADMINISTRATIVE BY
+                                                            select#select-countries.form-control.custom-select(name="Select")
+                                                                option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                                                option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                                                option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+
+
+                                                    .col-md-8
+                                                        .form-group
+                                                            label.form-label ORDER
+                                                            select#select-countries.form-control.custom-select(name="Select")
+                                                                option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                                                option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                                                option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                                                    .col-md-2
+                                                        .form-group
+                                                            label.form-label START DATE
+                                                            input.form-control(type='text' name='example-text-input')
+                                                    .col-md-2
+                                                        .form-group
+                                                            label.form-label STOP DATE
+                                                            input.form-control(type='text' name='example-text-input')
+
+                                                    .col-md-12
+                                                        .card.card-collapsed
+                                                            .card-header
+                                                                h3.card-title New Medication Issues ( POC )
+                                                                .card-options
+                                                                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                                                        i.fe.fe-chevron-up
+                                                                    a.card-options-remove(href='#' data-toggle='card-remove')
+                                                                        i.fe.fe-x
+                                                            .card-body
+
+                                                    .col-md-12
+                                                        .card.card-collapsed
+                                                            .card-header
+                                                                h3.card-title List Of Orders
+                                                                .card-options
+                                                                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                                                        i.fe.fe-chevron-up
+                                                                    a.card-options-remove(href='#' data-toggle='card-remove')
+                                                                        i.fe.fe-x
+                                                            .card-body
+                                                                
+                                                    .col-md-12
+                                                        .card.card-collapsed
+                                                            .card-header
+                                                                h3.card-title FAX LOGS
+                                                                .card-options
+                                                                    a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                                                        i.fe.fe-chevron-up
+                                                                    a.card-options-remove(href='#' data-toggle='card-remove')
+                                                                        i.fe.fe-x
+                                                            .card-body
+
+
+
+                                                    .col-md-12
+                                                        .form-group
+                                                            label.form-label ADDITIONAL NOTE
+                                                            input.form-control(type='text' name='example-text-input')
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label DATE
+                                                            input.form-control(type='text' name='example-text-input')
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label TIME
+                                                            input.form-control(type='text' name='example-text-input')
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label PHONE ORDER / READ BACK ORDER BY RN
+                                                            select#select-countries.form-control.custom-select(name="Select")
+                                                                option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                                                option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') YES
+                                                                option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') NO
+                                                .col-md-12
+                                                    .btn-list.text-right
+                                                        a.btn.btn-danger.text-white(type='button')
+                                                            i.fa.fa-eye.mr-2
+                                                            | SIGNATURE
+
+
+
+
+
+
+
+
+
+
+
+
+    .row
+
+
+
+
+
+
+
+
+
+
+
+
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Volunteer Coordinator Instructions
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                            thead.bg-success.text-white
+                                tr
+                                    th.text-white.text-center
+                                        .row.text-center
+                                            .col-md-12
+                                                .form-group
+                                                    label.form-label Specify Instructions Here
+                                                        textarea.form-control(name='example-textarea-input', rows='4', placeholder='text here..')
+                                    th.text-white
+                                        .row.text-center
+                                            .col-md-12
+                                                .form-group
+                                                    label.form-label Specify Instructions Here
+                                                        textarea.form-control(name='example-textarea-input', rows='4', placeholder='text here..')
+
+
+        .col-md-12
+            .card.text-white.bg-gradient-primary
+                .card-body
+                    h4.card-title Tip !
+                    p.card-text REVIEWED ASSIGNMENT WITH VOLUNTEER 
+
+        .col-md-12
+            .row
+                .col-md-6
+                    .btn-list.text-left
+                        a.btn.btn-primary.text-white(type='button')
+                            i.fa.fa-commenting.mr-2
+                            | FOR Q / A
+                        a.btn.btn-dark.text-white(type='button')
+                            i.fa.fa-pencil.mr-2
+                            | PATIENT SIGNATURE
+                .col-md-6
+                    .btn-list.text-right
+                        a.btn.btn-danger.text-white(type='button')
+                            i.fa.fa-eye.mr-2
+                            | SUBMIT FOR REVIEW
+            br
+            br
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+

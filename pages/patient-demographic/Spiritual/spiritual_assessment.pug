@@ -1,0 +1,985 @@
+extends ../../templates/layout
+
+block content
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='/nursing/assessment-list') Home
+            li.breadcrumb-item.active(aria-current='page') Patient Demographics
+        // End breadcrumb
+        .ml-auto
+            .btn-list
+                a.btn.btn-github.text-white(type='button')
+                    i.fa.fa-fax.mr-2
+                    | Fax
+                a.btn.btn-facebook.text-white(type='button')
+                    i.fa.fa-print.mr-2
+                    | Print
+                a.btn.btn-instagram.text-white(type='button')
+                    i.fa.fa-instagram.mr-2
+                    | Save / Update
+
+    // End page-header
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header.custom-header
+                    div
+                        h3.card-title PATIENT INFORMATION
+                .card-body
+                    form(action='#')
+                    .table-responsive
+                        table.table.table-bordered.text-nowrap.mb-0
+                            tbody
+                                tr
+                                    td
+                                        .row
+                                            .col-md-4
+
+                                            .col-md-4
+
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label CONTROL NO
+                                                    input.form-control(type='text' name='patientno' disabled)
+                    br
+
+                    .table-responsive
+                        table.table.table-bordered.text-nowrap.mb-0
+                            tbody
+                                tr
+                                    td
+
+                                        .row
+                                            .col-md-3
+                                                .form-group
+                                                    label.form-label FIRST NAME
+                                                    input.form-control(type='text' name='patientfname' placeholder='Enter Patient First Name')
+                                            .col-md-3
+                                                .form-group
+                                                    label.form-label MIDDLE NAME
+                                                    input.form-control(type='text' name='patientmname' placeholder='Enter Patient Middle Name')
+                                            .col-md-3
+                                                .form-group
+                                                    label.form-label LAST NAME
+                                                    input.form-control(type='text' name='patientlname' placeholder='Enter Patient Last Name')
+                                            .col-md-3
+                                                .form-group
+                                                    label.form-label SUFFIX
+                                                    input.form-control(type='text' name='patientsuffix' placeholder='Enter Patient Last Name')
+                                        .row
+                                            .col-md-6
+                                                .form-group
+                                                    label.form-label ADDRESS 1
+                                                    input.form-control(type='text' name='patientaddress1' placeholder='Enter Patient Address')
+                                            .col-md-6
+                                                .form-group
+                                                    label.form-label ADDRESS 2 ( OPTIONAL )
+                                                    input.form-control(type='text' name='patientaddress2' placeholder='Enter Patient Address')
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label STATE
+                                                    input.form-control(type='text' name='patientstate' placeholder='Enter Patient Last Name')
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label CITY
+                                                    input.form-control(type='text' name='patientcity' placeholder='Enter Patient Last Name')
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label ZIP CODE
+                                                    input.form-control(type='text' name='patientzipcode' placeholder='Enter Patient Last Name')
+                                        .row
+                                            .col-md-6
+                                                .form-group
+                                                    label.form-label DATE OF BIRTH
+                                                    .input-group
+                                                        .input-group-prepend
+                                                            .input-group-text
+                                                                i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                        input.form-control.fc-datepicker(placeholder='MM / DD / YYYY' type='text')
+
+                                            .col-md-6
+                                                .form-group
+                                                    label.form-label AGE
+                                                    input.form-control(type='text' name='patientstate' placeholder='Enter Patient Age')
+                                        .row
+                                            .col-md-6
+                                                .form-group
+                                                    label.form-label GENDER
+                                                    select#select-gender.form-control.custom-select(name='patientgender')
+                                                        option(value='br' name='' selected ) CHOOSE GENDER
+                                                        option(value='cz' name='') Male
+                                                        option(value='de' name='') Female
+                                            .col-md-6
+                                                .form-group
+                                                    label.form-label MARITAL STATUS
+                                                    select#select-status.form-control.custom-select(name='patientmaritalstatus')
+                                                        option(value='br' name='' selected ) CHOOSE STATUS
+                                                        option(value='cz' name='') Single
+                                                        option(value='de' name='') Married
+                                                        option(value='de' name='') Widowed
+                                        .row
+                                            .col-md-6
+                                                .form-group
+                                                    label.form-label HOME PHONE
+                                                    input.form-control(type='text' name='patienthomephone' placeholder='Enter Patient Home-Phone')
+                                            .col-md-6
+                                                .form-group
+                                                    label.form-label CELL PHONE
+                                                    input.form-control(type='text' name='patientcellphone' placeholder='Enter Patient Cell-Phone')
+                                        .row
+                                            .col-md-6
+                                                .form-group
+                                                    label.form-label RACE
+                                                    select#select-race.form-control.custom-select(name='patientrace')
+                                                        option(value='br' name='' selected ) CHOOSE RACE
+                                                        option(value='cz' name='') Single
+                                                        option(value='de' name='') Married
+                                                        option(value='de' name='') Widowed
+                                            .col-md-6
+                                                .form-group
+                                                    label.form-label ETHINICITY
+                                                    select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                        option(value='br' name='' selected ) CHOOSE ETHINICITY
+                                                        option(value='cz' name='') Single
+                                                        option(value='de' name='') Married
+                                                        option(value='de' name='') Widowed
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label PRIMARY LANGUAGE
+                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label RELIGION
+                                                    input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label DENOMINATION
+                                                    input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+                    br
+
+
+                    .row
+                        .col-xl-12.col-lg-12.col-md-12
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title Insurrance
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+
+
+                                    .row.mt-4
+                                        .col-md-12
+                                            .expanel.expanel-default
+                                                .expanel-heading.form-label Insurance History List
+                                                .expanel-body
+                                                    .table-responsive.text-center
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                            thead.bg-primary.text-white
+                                                                tr
+                                                                    th.text-white ID
+                                                                    th.text-white Current Pay Source
+                                                                    th.text-white Payer / Fin Resp
+                                                                    th.text-white Policy No
+                                                                    th.text-white Actions
+                                                                    th.text-white Delete
+                                                            tbody
+                                                                tr
+                                                                    th(scope='row') 1
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                            a.btn.btn-sm.btn-primary(href='#')
+                                                                                i.fa.fa-edit
+                                                                                |  Make These Default
+                                                                        td
+                                                                            a.btn.btn-sm.btn-danger(href='#')
+                                                                                i.fa.fa-trash
+                                                                                |  Delete
+
+
+                                    .row
+                                        .col-md-12
+                                            .form-group
+                                                .alert.alert-icon.alert-danger(role='alert')
+                                                  i.fa.fa-exclamation-circle.mr-2(aria-hidden='true')
+                                                  |  IMPORTANT - Per Authorization or Eligibility, only enter the Payer/s who is financially responsible. The claim will be submitted to this Payer/s only.
+
+
+
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label PRIMARY LANGUAGE
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label RELIGION
+                                                input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label DENOMINATION
+                                                input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Share of Cost
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Policy # HICN
+                                                input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label MBI # (Medicare Beneficiary Identifier)
+                                                    input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+                                    .btn-list.text-right
+                                        a.btn.btn-instagram.text-white(type='button')
+                                            i.fa.fa-instagram.mr-2
+                                            | Save / Update
+
+
+
+                    .row
+                        .col-xl-12.col-lg-12.col-md-12
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title Dates Of Service , Diagnosis & Allergies
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+
+                                    .row.mt-4
+                                        .col-md-12
+                                            .expanel.expanel-default
+                                                .expanel-heading.form-label Add Allergies
+                                                .expanel-body
+
+                                                    .table-responsive.text-center
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                            tbody
+                                                                tr
+                                                                    th(scope='row')
+                                                                        .row
+                                                                            .col-md-5
+                                                                                .form-group
+                                                                                    label.form-label ALLERGY
+                                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                                                            .col-md-5
+                                                                                .form-group
+                                                                                    label.form-label DESCRIPTION
+                                                                                    .row.gutters-xs
+                                                                                        .col
+                                                                                            input.form-control(type='text' placeholder='Search for...')
+                                                                            .col-md-2
+                                                                                .form-group
+                                                                                    br
+                                                                                    .row.gutters-xs
+                                                                                        .col
+                                                                                            span.col-auto
+                                                                                                a.btn.btn-md.btn-primary(href='#')
+                                                                                                    i.fa.fa-plus
+                                                                                                    |  Add Allergies
+                                    .row.mt-4
+                                        .col-md-12
+                                            .expanel.expanel-default
+                                                .expanel-heading.form-label Patient Allergies
+                                                .expanel-body
+
+                                                    .table-responsive.text-center
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                            thead.bg-primary.text-white.text-center
+                                                                tr
+                                                                    th.text-white Id
+                                                                    th.text-white Allergy
+                                                                    th.text-white Description
+                                                                    th.text-white Date
+                                                                    th.text-white Actions
+                                                            tbody.text-center
+                                                                tr
+                                                                    th(scope='row')
+                                                                    td
+                                                                    td
+                                                                    td
+                                                                    td
+                                                                        .btn-list
+                                                                            a.btn.btn-sm.btn-primary(href='#')
+                                                                                i.fa.fa-edit
+                                                                                |  EDIT
+                                                                            a.btn.btn-sm.btn-danger(href='#')
+                                                                                i.fa.fa-trash
+                                                                                |  DELETE
+
+
+
+
+
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Referrence Date
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Soc
+                                                input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Re Cert
+                                                input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+                                    .row
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label Eoc
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label Disc Code
+                                                input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label Admit Type
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) CHOOSE ETHINICITY
+                                                    option(value='cz' name='') Single
+                                                    option(value='de' name='') Married
+                                                    option(value='de' name='') Widowed
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label Start Cert
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) CHOOSE ETHINICITY
+                                                    option(value='cz' name='') Single
+                                                    option(value='de' name='') Married
+                                                    option(value='de' name='') Widowed
+                                    .row
+
+                                        .col-md-6
+                                            .form-group
+                                                label.form-label Primary Dx
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) CHOOSE ETHINICITY
+                                                    option(value='cz' name='') Single
+                                                    option(value='de' name='') Married
+                                                    option(value='de' name='') Widowed
+                                        .col-md-6
+                                            .form-group
+                                                label.form-label Disease
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) CHOOSE ETHINICITY
+                                                    option(value='cz' name='') Single
+                                                    option(value='de' name='') Married
+                                                    option(value='de' name='') Widowed
+                                    .row
+
+                                        .col-md-6
+                                            .form-group
+                                                label.form-label Secondary Dx
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) CHOOSE ETHINICITY
+                                                    option(value='cz' name='') Single
+                                                    option(value='de' name='') Married
+                                                    option(value='de' name='') Widowed
+                                        .col-md-6
+                                            .form-group
+                                                label.form-label Disease
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) CHOOSE ETHINICITY
+                                                    option(value='cz' name='') Single
+                                                    option(value='de' name='') Married
+                                                    option(value='de' name='') Widowed
+
+                                        .col-sm-12.col-md-12
+                                            .alert.alert-info
+                                                button.close(type='button' data-dismiss='alert' aria-hidden='true')
+                                                strong Comorbidities
+                                                hr.message-inner-separator
+                                                p GERD, HTN, Generalized Muscle Weakness, Hyperlipidemia
+
+
+
+
+                                    .btn-list.text-right
+                                        a.btn.btn-instagram.text-white(type='button')
+                                            i.fa.fa-instagram.mr-2
+                                            | Save / Update
+
+                    .row
+                        .col-xl-12.col-lg-12.col-md-12
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title Place Of Service (POS)
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+                                    .row
+                                        .col-md-6
+                                            .expanel.expanel-default
+                                                .expanel-heading.form-label
+                                                .expanel-body
+                                                    .table-responsive
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                            tbody
+                                                                tr
+                                                                    th(scope='row')
+                                                                        .col-md-12
+                                                                            .form-group
+                                                                                label.form-label TYPE
+                                                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                                    option(value='br' name='' selected ) CHOOSE TYPE
+
+
+
+
+
+
+                                        .col-md-6
+                                            .expanel.expanel-default
+                                                .expanel-heading.form-label
+                                                .expanel-body
+                                                    .table-responsive
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                            tbody
+                                                                tr
+                                                                    th(scope='row')
+                                                                        .row.text-center
+                                                                            .col-md-8
+                                                                                .form-group
+                                                                                    label.form-label
+                                                                                    br
+                                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='')
+                                                                            .col-md-4
+                                                                                .form-group
+                                                                                    label.form-label
+                                                                                    br
+                                                                                    a.btn.btn-facebook.text-white(type='button')
+                                                                                        i.fa.fa-plus.mr-2
+                                                                                        | Add New Type
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label EFFECTIVE DATE
+                                                .input-group
+                                                    .input-group-prepend
+                                                        .input-group-text
+                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                    input.form-control.fc-datepicker(placeholder='MM / DD / YYYY' type='text')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label FACILITY NAME
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label UNIT NO
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label PCG
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label NPI
+                                                input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label R&B RATE
+                                                input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+                                    .row
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label ADDRESS
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label CITY
+                                                input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label STATE
+                                                    input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label ZIP CODE
+                                                    input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label PHONE 1
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label PHONE 2
+                                                input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label FAX NO
+                                                input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+
+                                    .btn-list.text-right
+                                        a.btn.btn-instagram.text-white(type='button')
+                                            i.fa.fa-instagram.mr-2
+                                            | Save / Update
+
+                    .row
+                        .col-xl-12.col-lg-12.col-md-12
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title Authorized Representative (AR / Emergency Contact (EC))
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+
+                                    .row.mt-4
+                                        .col-md-12
+                                            .expanel.expanel-default
+                                                .expanel-heading.form-label Emergency Contact Details
+                                                .expanel-body
+                                                    .table-responsive.text-center
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                            thead.bg-primary.text-white
+                                                                tr
+                                                                    th.text-white ID
+                                                                    th.text-white Name
+                                                                    th.text-white Relationship To Patient
+                                                                    th.text-white Address
+                                                                    th.text-white Phone 1
+                                                                    th.text-white Phone 2
+                                                                    th.text-white Fax
+                                                                    th.text-white Action
+                                                            tbody
+                                                                tr
+                                                                    th(scope='row') 1
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                            .btn-list
+                                                                                a.btn.btn-sm.btn-info(href='#')
+                                                                                    i.fa.fa-edit
+                                                                                    |  Update
+                                                                                a.btn.btn-sm.btn-danger(href='#')
+                                                                                    i.fa.fa-trash
+                                                                                    |  Delete
+
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label First Name
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Contact First Name')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Last Name
+                                                input.form-control(type='text' name='patientreligion' placeholder='Contact Last Name')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Email
+                                                input.form-control(type='text' name='patientdenomination' placeholder='Contact Email Address')
+                                    .row
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label Address
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Contact Address')
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label City
+                                                input.form-control(type='text' name='patientreligion' placeholder='Contact City')
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label State
+                                                    input.form-control(type='text' name='patientdenomination' placeholder='Contact State')
+                                        .col-md-3
+                                            .form-group
+                                                label.form-label Zipcode
+                                                    input.form-control(type='text' name='patientdenomination' placeholder='Contact Zipcode')
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Phone 1
+                                                input.form-control(type='text' name='patientprimarylanguage' placeholder='Contact First Name')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Phone 2
+                                                input.form-control(type='text' name='patientreligion' placeholder='Contact Last Name')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Fax
+                                                input.form-control(type='text' name='patientdenomination' placeholder='Contact Email Address')
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Relationship
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) Choose Relationship
+
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label AR / EC IS
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) Choose AR / EC IS
+
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label Relationship
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) Choose Relationship
+
+
+
+
+                                    .btn-list.text-right
+                                        a.btn.btn-instagram.text-white(type='button')
+                                            i.fa.fa-instagram.mr-2
+                                            | Save / Update
+                    .row
+                        .col-xl-12.col-lg-12.col-md-12
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title Referral Source & Attending MD
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+                                    .row
+                                        .col-md-6
+                                            .card.mb-5
+                                                .card-body
+                                                    .media.mt-0
+                                                        .col-md-12
+                                                            .form-group
+                                                                label.form-label Medical Director
+                                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                    option(value='br' name='' selected ) Choose Medical Director
+
+                                                .card-footer.text-secondary.border-top
+                                                    .table-responsive.text-center
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                            thead.bg-primary.text-white
+                                                                tr
+                                                                    th.text-white SSN
+                                                                    th.text-white Cellphone
+                                                                    th.text-white Phone
+                                                                    th.text-white Fax
+                                                                    th.text-white Npi
+
+                                                            tbody
+                                                                tr
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+
+
+                                        .col-md-6
+                                            .card.mb-5
+                                                .card-body
+                                                    .media.mt-0
+                                                        .col-md-12
+                                                            .form-group
+                                                                label.form-label Referring Md / Attending Md ( Patient Choice )
+                                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                    option(value='br' name='' selected ) Choose Referring Md / Attending Md ( Patient Choice )
+
+                                                .card-footer.text-secondary.border-top
+                                                    .table-responsive.text-center
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                            thead.bg-primary.text-white
+                                                                tr
+                                                                    th.text-white SSN
+                                                                    th.text-white Cellphone
+                                                                    th.text-white Phone
+                                                                    th.text-white Fax
+                                                                    th.text-white Npi
+
+                                                            tbody
+                                                                tr
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+
+                                    .row
+                                        .col-md-6
+                                            .card.mb-5
+                                                .card-body
+                                                    .media.mt-0
+                                                        .col-md-12
+                                                            .form-group
+                                                                label.form-label Other Referral Source
+                                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                    option(value='br' name='' selected ) Choose Other Referral Source
+
+                                                .card-footer.text-secondary.border-top
+                                                    .table-responsive.text-center
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                            thead.bg-primary.text-white
+                                                                tr
+                                                                    th.text-white SSN
+                                                                    th.text-white Cellphone
+                                                                    th.text-white Phone
+                                                                    th.text-white Fax
+                                                                    th.text-white Npi
+
+                                                            tbody
+                                                                tr
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                        .col-md-6
+                                            .card.mb-5
+                                                .card-body
+                                                    .media.mt-0
+                                                        .col-md-12
+                                                            .form-group
+                                                                label.form-label Hospice Physician Designee ( If Applicable )
+                                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                    option(value='br' name='' selected ) Choose Hospice Physician Designee
+
+                                                .card-footer.text-secondary.border-top
+                                                    .table-responsive.text-center
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                            thead.bg-primary.text-white
+                                                                tr
+                                                                    th.text-white SSN
+                                                                    th.text-white Cellphone
+                                                                    th.text-white Phone
+                                                                    th.text-white Fax
+                                                                    th.text-white Npi
+
+                                                            tbody
+                                                                tr
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+                                                                    th(scope='row')
+
+                                    .btn-list.text-right
+                                        a.btn.btn-instagram.text-white(type='button')
+                                            i.fa.fa-instagram.mr-2
+                                            | Save / Update
+
+
+
+
+                    .row
+                        .col-xl-12.col-lg-12.col-md-12
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title Vendors
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+                                    .row.mt-4
+                                        .col-md-4
+                                            .expanel.expanel-primary
+                                                .expanel-heading.form-label Pharmacy
+                                                .expanel-body
+                                                    .row
+                                                        .col-md-6
+                                                            .form-group
+                                                                label.form-label Main
+                                                                select#select-race.form-control.custom-select(name='patientrace')
+                                                                    option(value='br' name='' selected ) Choose Main Pharmacy
+
+                                                        .col-md-6
+                                                            .form-group
+                                                                label.form-label Alternative
+                                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                    option(value='br' name='' selected ) Choose Alternative Pharmacy
+
+                                        .col-md-4
+                                            .expanel.expanel-secondary
+                                                .expanel-heading.form-label Dme
+                                                .expanel-body
+                                                    .row
+                                                        .col-md-6
+                                                            .form-group
+                                                                label.form-label Main
+                                                                select#select-race.form-control.custom-select(name='patientrace')
+                                                                    option(value='br' name='' selected ) Choose Main DME
+
+                                                        .col-md-6
+                                                            .form-group
+                                                                label.form-label Alternative
+                                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                    option(value='br' name='' selected ) Choose Alternative DME
+
+                                        .col-md-4
+                                            .expanel.expanel-danger
+                                                .expanel-heading.form-label Others
+                                                .expanel-body
+                                                    .row
+                                                        .col-md-6
+                                                            .form-group
+                                                                label.form-label Main
+                                                                select#select-race.form-control.custom-select(name='patientrace')
+                                                                    option(value='br' name='' selected ) Choose Main Others
+
+                                                        .col-md-6
+                                                            .form-group
+                                                                label.form-label Alternative
+                                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                    option(value='br' name='' selected ) Choose Alternative Others
+
+
+
+
+                                    .btn-list.text-right
+                                        a.btn.btn-instagram.text-white(type='button')
+                                            i.fa.fa-instagram.mr-2
+                                            | Save / Update
+                    .row
+                        .col-xl-12.col-lg-12.col-md-12
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title Mortuary Info
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+
+                                    .table-responsive
+                                        table.table.table-bordered.text-nowrap.mb-0
+                                            tbody
+                                                tr
+                                                    td
+                                                        .row
+                                                            .col-md-6
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label Select Mortuary
+                                                                    select#select-mortuary.form-control.custom-select(name='mortuary')
+                                                                        option(value='br' name='' selected ) CHOOSE MORTUARY
+
+                                    br
+
+                                    .table-responsive
+                                        table.table.table-bordered.text-nowrap.mb-0
+                                            tbody
+                                                tr
+                                                    td
+                                                        .row
+                                                            .col-md-4
+                                                                .form-group
+                                                                    label.form-label Mortuary Name
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                                            .col-md-4
+                                                                .form-group
+                                                                    label.form-label Contact Name
+                                                                    input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                                            .col-md-4
+                                                                .form-group
+                                                                    label.form-label Email
+                                                                    input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+                                                        .row
+                                                            .col-md-3
+                                                                .form-group
+                                                                    label.form-label Address
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                                            .col-md-3
+                                                                .form-group
+                                                                    label.form-label City
+                                                                    input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                                            .col-md-3
+                                                                .form-group
+                                                                    label.form-label State
+                                                                    input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+                                                            .col-md-3
+                                                                .form-group
+                                                                    label.form-label Zip Code / Postal <Code></Code>
+                                                                    input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+                                                        .row
+                                                            .col-md-4
+                                                                .form-group
+                                                                    label.form-label Phone
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                                            .col-md-4
+                                                                .form-group
+                                                                    label.form-label Alt-Phone
+                                                                    input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                                            .col-md-4
+                                                                .form-group
+                                                                    label.form-label Fax
+                                                                    input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')
+
+                                    br
+
+
+
+
+
+
+
+                                    .btn-list.text-right
+                                        a.btn.btn-instagram.text-white(type='button')
+                                            i.fa.fa-instagram.mr-2
+                                            | Save / Update
+
+                    .table-responsive
+                        table.table.table-bordered.text-nowrap.mb-0
+                            tbody
+                                tr
+                                    td
+                                        .row
+                                            .col-md-12
+                                                .form-group
+                                                    label.form-label Special Instructions
+                                                    textarea.form-control(name='example-textarea-input' rows='4' placeholder='Special Instructions')
+
+                    .row.mt-4
+                        .col-md-12
+                            .expanel.expanel-default
+                                .expanel-heading.form-label Fax History
+                                .expanel-body
+                                    table.table.card-table.table-striped.table-vcenter.table-outline.table-bordered.text-nowrap
+                                        thead.text-center
+                                            tr
+                                                th.border-top-0(scope='col') Order No
+                                                th.border-top-0(scope='col') Vendor Name
+                                                th.border-top-0(scope='col') Send By
+                                                th.border-top-0(scope='col') Fax No
+                                                th.border-top-0(scope='col') Status
+                                                th.border-top-0(scope='col') Phone No
+                                                th.border-top-0(scope='col') Timestamp
+                                                th.border-top-0(scope='col') Action
+
+                                        tbody.text-center
+                                            tr
+                                                th(scope='row') 1
+                                                td
+                                                td
+                                                td
+                                                td
+                                                td
+                                                td
+                                                td
+                                                    .btn-list
+                                                        a.btn.btn-sm.btn-primary(href='#')
+                                                            i.fa.fa-edit
+                                                            |  Open
+                                                        a.btn.btn-sm.btn-danger(href='#')
+                                                            i.fa.fa-mobile-phone
+                                                            |  Call
+
+

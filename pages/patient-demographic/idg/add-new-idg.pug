@@ -1,0 +1,338 @@
+extends ../../../templates/layout
+
+block content
+
+
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') Home
+            li.breadcrumb-item.active(aria-current='page') Add New Idg
+        // End breadcrumb
+        .ml-auto
+            .input-group
+                a.btn.btn-success.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-plus
+                        |  Save Assessment
+                a.btn.btn-danger.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-trash
+                        |  Delete
+                a.btn.btn-primary.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-backward
+                        |  Back
+    // End page-header
+
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title Attach Document
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-12
+                            .form-group
+                                input.dropify(type='file')
+
+
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title Idg Review
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-4
+                            .form-group
+                                label.form-label Entered By :
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Date
+                                input.form-control(type='text' name='example-disabled-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label Type Of Visit
+                                select#select-countries.form-control.custom-select(name="Select")
+                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                            .form-group
+                                label.form-label Time
+                                input.form-control(type='text' name='example-disabled-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label Type Of Visit
+                                select#select-countries.form-control.custom-select(name="Select")
+                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+
+                            .form-group
+                                label.form-label Note
+                                input.form-control(type='text' name='example-disabled-input')
+
+                    
+
+
+
+    .row
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Poc Summary
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .ml-auto
+                        .btn-list.text-right
+                            a.btn.btn-btn-sm.btn-facebook.text-white(type='button' href='/0000019-009A/add-idg-assessment')
+                                i.fa.fa-plus.mr-2
+                                | Add Poc Summary
+                    br
+                    .table-responsive
+                        table#example1.table.table-striped.table-bordered.text-nowrap.w-100
+                            thead
+                                tr
+                                    th.wd-15p Entered By
+                                    th.wd-10p Date Entered
+                                    th.wd-15p Summary Report
+                            tbody
+                                tr
+                                    td Zandra Gonzales
+                                    td 07/25/2020
+                                    td 
+                                    
+
+
+
+
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Recent Orders
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .ml-auto
+                        .btn-list.text-right
+                            a.btn.btn-btn-sm.btn-success.text-white(type='button' href='/0000019-009A/add-idg-assessment')
+                                i.fa.fa-plus.mr-2
+                                | Add Recent Orders
+                    br
+                    .table-responsive
+                        table#example3.table.table-striped.table-bordered.text-nowrap.w-100
+                            thead
+                                tr
+                                    th.wd-15p Ordered By
+                                    th.wd-10p Date Ordered
+                                    th.wd-15p Reason
+                            tbody
+                                tr
+                                    td Zandra Gonzales
+                                    td 07/25/2020
+                                    td
+
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title IDG Discussion / Updated Comprehensive Assessment Review
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-12
+                            .form-group.mb-0
+                                label.form-label NURSING
+                                textarea.form-control(name='example-textarea-input', rows='4', placeholder='text here..')
+                    .row
+                        .col-md-12
+                            .form-group.mb-0
+                                label.form-label SPIRITUAL ( If Applicable )
+                                textarea.form-control(name='example-textarea-input', rows='4', placeholder='text here..')
+                    .row
+                        .col-md-12
+                            .form-group.mb-0
+                                label.form-label PSYCHOSOCIAL ( If Applicable )
+                                textarea.form-control(name='example-textarea-input', rows='4', placeholder='text here..')
+                    .row
+                        .col-md-12
+                            .form-group.mb-0
+                                label.form-label OTHER ( If Applicable )
+                                textarea.form-control(name='example-textarea-input', rows='4', placeholder='text here..')
+
+            
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Plan Of Care ( Problem / Intervention / Goals / Status )
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Level Of Care
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white From Date
+                                    th.text-white Care Level
+
+                            tbody
+                                tr
+                                    th(scope='row') 
+                                    td
+
+                                
+
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Frequency Of Visit
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .btn-list.text-right
+                        a.btn.btn-primary.btn-sm(href='/nursing/assessment-form')
+                            span
+                                i.fa.fa-plus
+                                |  ADD
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white DISCIPLINE
+                                    th.text-white SPECIAL INSTRUCTION
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td.small
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Staff Assigned
+                    .card-options
+                        a.btn.btn-danger.btn-sm(href='/nursing/staff-assignment')
+                            span
+                                i.fa.fa-address-book
+                                |  Go To Staff Assigned
+                .card-body
+                    .btn-list.text-right
+
+                    br
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-primary.text-white
+                                tr
+                                    th.text-white From Date
+                                    th.text-white Care Level
+
+                            tbody
+                                tr
+                                    th(scope='row')
+                                    td
+        .col-md-12
+            .card.text-white.bg-gradient-primary
+                .card-body
+                    h4.card-title Tip !
+                    p.card-text Next POC / IDG review to be done no later than 14 days from today's date.
+
+
+        .col-md-12
+            .row
+                .col-md-6
+                    button.btn.btn-primary.btn-block(type='button')
+                        span
+                            i.si.si-note
+                            |  MD SIGNATURE
+
+                .col-md-6
+                    button.btn.btn-primary.btn-block(type='button')
+                        span
+                            i.si.si-note
+                            |  MSW SIGNATURE
+            br
+            .row
+                .col-md-6
+                    button.btn.btn-primary.btn-block(type='button')
+                        span
+                            i.si.si-note
+                            |  RN SIGNATURE
+
+                .col-md-6
+                    button.btn.btn-primary.btn-block(type='button')
+                        span
+                            i.si.si-note
+                            |  CHAPLAIN SIGNATURE
+            br
+            .row
+                .col-md-6
+                    button.btn.btn-primary.btn-block(type='button')
+                        span
+                            i.si.si-note
+                            |  OTHER SIGNATURE
+
+                .col-md-6
+                    button.btn.btn-primary.btn-block(type='button')
+                        span
+                            i.si.si-note
+                            |  OTHER SIGNATURE
+            br
+            .row
+                .col-md-6
+                    button.btn.btn-primary.btn-block(type='button')
+                        span
+                            i.si.si-note
+                            |  OTHER SIGNATURE
+
+                .col-md-6
+                    button.btn.btn-primary.btn-block(type='button')
+                        span
+                            i.si.si-note
+                            |  OTHER SIGNATURE
+            br

@@ -1,0 +1,827 @@
+extends ../../../templates/layout
+
+block content
+
+
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') Nursing
+            li.breadcrumb-item.active(aria-current='page') Assessment
+        // End breadcrumb
+        .ml-auto
+            .input-group
+                a.btn.btn-success.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-plus
+                        |  Save Assessment
+                a.btn.btn-danger.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-trash
+                        |  Delete
+                a.btn.btn-primary.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-backward
+                        |  Back
+    // End page-header
+
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title Attach Document
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-12
+                            .form-group
+                                input.dropify(type='file')
+
+
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title MD Visit Notes Assessment
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-4
+                            .form-group
+                                label.form-label Entered By :
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Care Level
+                                input.form-control(type='text' name='example-disabled-input')
+                            .form-group
+                                label.form-label Time In
+                                input.form-control(type='text' name='example-disabled-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label Staff Assigned
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Visit Date
+                                input.form-control(type='text' name='example-disabled-input')
+                            .form-group
+                                label.form-label Time Out
+                                input.form-control(type='text' name='example-disabled-input' )
+                        .col-md-4
+                            .form-group
+                                label.form-label Discipline
+                                input.form-control(type='text' name='example-text-input')
+                            
+                            .form-group
+                                label.form-label Overall Duration
+                                input.form-control(type='text' name='example-disabled-input')
+                    .row
+                        .col-md-4
+                            .form-group
+                                label.form-label Form Type
+                                select#select-countries.form-control.custom-select(name="Select")
+                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                        .col-md-4
+                            .form-group
+                                label.form-label Place Of Service
+                                select#select-countries.form-control.custom-select(name="Select")
+                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Home
+                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') B&C
+                                    option(value="pl" data-data='{"image": "../assets/images/flag/flags/pl.svg"}' ) SNF
+                        .col-md-4
+                            .form-group
+                                label.form-label Md Visit Type
+                                select#select-countries.form-control.custom-select(name="Select")
+                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') New
+                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Established
+                                    option(value="pl" data-data='{"image": "../assets/images/flag/flags/pl.svg"}') Recent F2F Billable
+                                    option(value="pl" data-data='{"image": "../assets/images/flag/flags/pl.svg"}') Recent F2F Non - Billable
+
+
+
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Subjective
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    fieldset.border.p-15
+                        legend.label.form-label &nbsp; Answer applicable question on Pain Assessment, even if no pain reported. ( Required for HIS )
+                        label.form-label Is The Patient Alert Oriented And Able to Verbalize Pain ?
+                            .form-inline.col-md-2.col-md-6
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Yes &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label No
+                        label.form-label Is The Patient Uncomportable Because Of Pain ?
+                            .form-inline.col-md-2.col-md-6
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Yes &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label No  &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Unwilling &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Unable
+                        .row
+                            .col-md-12
+                                .form-group
+
+                                    button.btn.btn-app.btn-info.btn-block(type='button') Open Pain Assessment
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Objective
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-4
+                            .form-group
+                                label.form-label Temperature
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Bp
+                                input.form-control(type='text' name='example-disabled-input')
+                            .form-inline.col-md-12.col-md-12
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Yes &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label No  &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Unwilling &nbsp;&nbsp;&nbsp;
+                        .col-md-4
+                            .form-group
+                                label.form-label Pulse
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Ht ( Inch )
+                                input.form-control(type='text' name='example-disabled-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label Resp
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Wt ( Lbs )
+                                input.form-control(type='text' name='example-disabled-input')
+                    br
+                    .row
+                        .col-md-4
+                            .form-group
+                                label.form-label Mac ( Cm )
+                                input.form-control(type='text' name='example-text-input')
+                            .form-inline.col-md-12.col-md-12
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Left &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Right  &nbsp;&nbsp;&nbsp;
+                        .col-md-4
+                            .form-group
+                                label.form-label BMI
+                                input.form-control(type='text' name='example-text-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label O2 Sat
+                                input.form-control(type='text' name='example-text-input')
+                            .form-inline.col-md-12.col-md-12
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label RA &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label 2L  &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label 3L  &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label 4L +
+
+
+            .card.card-collapsed.myTab2
+
+                .card-header
+                    h3.card-title Clinical Findings Summary
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    ul#myTab2.nav.nav-tabs(role='tablist')
+                        li.nav-item
+                            a#environmentalsafety-tab2.nav-link.active.show(data-toggle='tab' href='#environmentalsafety' role='tab' aria-controls='environmentalsafety' aria-selected='true') Environmental / Safety
+                        li.nav-item
+                            a#profile-tab2.nav-link(data-toggle='tab' href='#profile2' role='tab' aria-controls='profile' aria-selected='false') Mobility
+                        li.nav-item
+                            a#contact-tab2.nav-link(data-toggle='tab' href='#contact2' role='tab' aria-controls='contact' aria-selected='false') Adl Assessment
+                        li.nav-item
+                            a#dmedevice-tab2.nav-link(data-toggle='tab' href='#dmedevice' role='tab' aria-controls='dmedevice' aria-selected='false') Dme Device
+                        li.nav-item
+                            a#ivassessment-tab2.nav-link(data-toggle='tab' href='#ivassessment' role='tab' aria-controls='ivassessment' aria-selected='false') IV Assessment
+                    #myTab2Content.tab-content.tab-bordered
+                        #environmentalsafety.tab-pane.fade.active.show(role='tabpanel' aria-labelledby='environmentalsafety-tab2')
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+                                    thead
+                                        tr
+                                            th.wd-15p(colspan=3) ( If Any Checked, complete safety assessment addendum w/ comprehensive assessment )
+
+                                    tbody
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Alone At Night
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Alone During Day
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Insufficient Heat / Cooling
+
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Limited Lightning
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Oxygen In Use
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Limited Water
+
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Dangerous Neighborhood
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Medication ( Risk Of Error Or Diversion )
+                                            td
+
+                                                .form-group
+                                                    small#emailHelp.form-text If Other Kindly Specify Here :
+                                                    input.form-control(type='text' name='example-text-input')
+
+                        #profile2.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab2')
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+                                    thead
+                                        tr
+                                            th.wd-15p(colspan=3)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-radio
+                                                            input.custom-control-input(type='radio' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Ambulatory
+
+                                    tbody
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Cane
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Walker
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Wheelchair
+
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Stand By Assist
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Moderate Assist
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Maximum Assist
+
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox If wheel chair, are ramps available where needed ?
+
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-radio
+                                                            input.custom-control-input(type='radio' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Yes
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-radio
+                                                            input.custom-control-input(type='radio' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label No
+
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+                                    thead
+                                        tr
+                                            th.wd-15p(colspan=3)
+                                                .form-group
+                                                    small#emailHelp.form-text Endurance # of step before resting
+                                                    input.form-control(type='text' name='example-text-input')
+
+
+
+
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+                                    thead
+                                        tr
+                                            th.wd-15p(colspan=3)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-radio
+                                                            input.custom-control-input(type='radio' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Non - Ambulatory
+
+                                    tbody
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Bed Bound
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Bed Rest BRP
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Up As Tolerated
+
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Maximum Assist
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Transfer Bed / Chair
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Exercise Prescribe
+
+                                        tr
+                                            td(colspan=3)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Range Of Motion
+
+
+
+
+
+                        #contact2.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab2')
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+                                    thead
+                                        tr
+                                            th.wd-15p.text-center(colspan=2)
+                                               | ( Dependence Scale: 0 – Independent, 1- Minimal / Supervision, 2 - Moderate, 3 – Maximal / Complete )
+
+
+                                    tbody
+
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Ambulation
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Toileting
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Transfer
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Dressing
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Feeding
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Bathing
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Total ADL score ( Possible 0 - 18 ) :
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                        tr.text-center
+                                            td(colspan=1)
+
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Total number of activities with complete dependence ( 0 - 6 )
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+
+
+
+                        #dmedevice.tab-pane.fade(role='tabpanel' aria-labelledby='dmedevice-tab2')
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+
+                                    tbody
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#airmatress.form-text Air Mattress
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#Bed.form-text Bed
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#Bedpan.form-text Bedpan
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#Eggcrate.form-text Eggcrate
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#Overbedtable.form-text Overbed Table
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#Cane.form-text Cane
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#Walker.form-text Walker
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#WheelChair.form-text WheelChair
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#showerchair.form-text Shower Chair
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#gerichair.form-text Geri - Chair / Recliner
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#hoyerlift.form-text Hoyer Lift
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#urinal.form-text Urinal
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#etank.form-text E - Tank
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#nebulizer.form-text Nebulizer
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#suctionmachine.form-text Suction Machine
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#o2conc.form-text O2 Conc
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#commode.form-text Commode
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td(colspan=3)
+                                                .form-group
+                                                    small#specify.form-text If Others Kindly Specify Here
+                                                    input.form-control(type='text' name='example-text-input')
+
+
+                        #ivassessment.tab-pane.fade(role='tabpanel' aria-labelledby='ivassessment-tab2')
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+
+                                    tbody
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#airmatress.form-text Type
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Date Of Insertion
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Flush Solution
+                                                    input.form-control(type='text' name='example-text-input')
+                                            td
+                                                .form-group
+                                                    small#airmatress.form-text Size
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Dressing Type
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Flush Frequency
+                                                    input.form-control(type='text' name='example-text-input')
+                                            td
+                                                .form-group
+                                                    small#airmatress.form-text Location
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Frequency Of Change
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Other Site / Care
+                                                    input.form-control(type='text' name='example-text-input')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+

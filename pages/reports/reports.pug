@@ -1,0 +1,570 @@
+extends ../../templates/layout
+
+block content
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') Home
+            li.breadcrumb-item.active(aria-current='page')=title
+    .row
+        .card
+            .card-header
+                h3.card-title
+            .card-body.p-6
+                .panel.panel-primary
+                    .tab_wrapper.first_tab
+                        ul.tab_list
+                            li CLINICAL REPORTS
+                        .content_wrapper
+                            .tab_content.active
+                                .card
+                                    .card-header
+                                        h3.card-title
+                                    .card-body.p-6
+                                        .panel.panel-primary
+                                            .tab_wrapper.first_tab
+                                                ul.tab_list
+                                                    li RECERT LIST
+                                                    li SUPERVISORY VISIT
+                                                    li ALL VISIT
+                                                    li ONCALL LOG
+                                                    li MISSING CONSENTS
+                                                    li POTENTIAL SIA PATIENTS
+                                                .content_wrapper
+                                                    .tab_content.active
+                                                        
+                                                        .col-md-12
+                                                            .table-responsive
+                                                                table#example1.table.table-striped.table-bordered.text-nowrap
+                                                                    thead
+                                                                        tr
+
+                                                                            th PATIENT ID
+                                                                            th PATIENT NAME
+                                                                            th CTI NO
+                                                                            th PRIMARY INS
+                                                                            th CERTIFICATION DATES
+                                                                            th ACTION REQUIRED
+
+
+                                                                    tbody
+                                                                        tr
+
+                                                                            td
+                                                                            td
+                                                                            td
+                                                                            td
+                                                                            td
+                                                                            td
+                                                                            
+                                                    .tab_content
+
+                                                    .tab_content
+
+                br
+                                                        
+                .panel.panel-primary
+                    .tab_wrapper.first_tab
+                        ul.tab_list
+                            li QUAPI REPORTS
+                        .content_wrapper
+                            .tab_content.active
+                                .card
+                                    .card-header
+                                        h3.card-title
+                                    .card-body.p-6
+                                        .panel.panel-primary
+                                            .tab_wrapper.first_tab
+                                                ul.tab_list
+                                                    li COMFORTABLE DYING
+                                                    li UNWANTED HOSPITALIZATION
+                                                    li INFECTION CONTROL
+                                                    li INCIDENT RATE
+                                                    li VOLUNTEER SAVING
+                                                    li EXPORT CAHPS SURVEYS DATE
+                                                    li WOUNDS
+                                                .content_wrapper
+                                                    .tab_content.active
+
+                                                    .tab_content
+
+                                                    .tab_content
+
+                br
+
+                .panel.panel-primary
+                    .tab_wrapper.first_tab
+                        ul.tab_list
+                            li COST REPORTS
+                        .content_wrapper
+                            .tab_content.active
+                                .card
+                                    .card-header
+                                        h3.card-title
+                                    .card-body.p-6
+                                        .panel.panel-primary
+                                            .tab_wrapper.first_tab
+                                                ul.tab_list
+                                                    li WORK SHEET S-1 ( PART II )
+                                                    li WORK SHEET S-1 ( PART III )
+
+                                                .content_wrapper
+                                                    .tab_content.active
+                                                        .table-responsive
+                                                            table.table.table-striped.table-bordered.text-nowrap
+                                                                thead
+                                                                    tr
+
+                                                                        th WORKSHEET ID
+                                                                        th WORKSHEET NAME
+                                                                        th WORKSHEET DATE
+                                                                        th DATE STARTED
+                                                                        th DATE END
+                                                                        th DISCIPLINE WORKING
+                                                                        th PATIENT REFFERED TO
+                                                                tbody
+                                                                    tr
+
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                    .tab_content
+
+                                                    .tab_content
+
+
+                br
+
+                .panel.panel-primary
+                    .tab_wrapper.first_tab
+                        ul.tab_list
+                            li Human Resources
+                        .content_wrapper
+                            .tab_content.active
+                                .card
+                                    .card-header
+                                        h3.card-title
+                                    .card-body.p-6
+                                        .panel.panel-primary
+                                            .tab_wrapper.first_tab
+                                                ul.tab_list
+                                                    li EMPLOYEE CONTACT LIST
+                                                    li DOCUMENT DATE
+                                                    li LICENSE DOCUMENT EXP
+                                                    li VENDOR / DOCUMENT LICENSE EXP
+                                                    li VENDOR CONTACT LIST
+                                                .content_wrapper
+                                                    .tab_content.active
+                                                        .table-responsive
+                                                            table.table.table-striped.table-bordered.text-nowrap
+                                                                thead
+                                                                    tr
+
+                                                                        th EMPLOYEE ID
+                                                                        th EMPLOYEE NAME
+                                                                        th LICENSED NO
+                                                                        th ADDRESS
+                                                                        th DISCIPLINE
+                                                                        th CELLPHONE NO
+                                                                        th HOME PHONE
+                                                                        th DATE HIRED
+                                                                        th TERMINATION DATE
+                                                                tbody
+                                                                    tr
+
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        
+                                                    .tab_content
+
+                                                    .tab_content
+
+                                                        
+
+                br
+
+                .panel.panel-primary
+                    .tab_wrapper.first_tab
+                        ul.tab_list
+                            li Financial Report
+                        .content_wrapper
+                            .tab_content.active
+                                .card
+                                    .card-header
+                                        h3.card-title
+                                    .card-body.p-6
+                                        .panel.panel-primary
+                                            .tab_wrapper.first_tab
+                                                ul.tab_list
+                                                    li MONTHLY BILLING
+                                                    li MONTHLY BILLING V2
+                                                    li BILLING ISSUES
+                                                .content_wrapper
+                                                    .tab_content.active
+
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label PERIOD
+                                                                    input.form-control(type='text' name='example-disabled-input')
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label PATIENT NAME
+                                                                    input.form-control(type='text' name='example-disabled-input')
+
+
+                                                        .table-responsive
+                                                            table#example1.table.table-striped.table-bordered.text-nowrap
+                                                                thead
+                                                                    tr
+
+                                                                        th PATIENT NAME
+                                                                        th POS
+                                                                        th CARE DAY
+                                                                        th PAYER
+                                                                        th R&B
+                                                                        th MD VISIT
+                                                                        th RN VISIT 
+                                                                        th LVN VISIT
+                                                                        th HA VISIT
+                                                                        th SW VISIT
+                                                                        th SW PHONE
+                                                                        th SC VISITS
+                                                                        th NOTES AUTH NO
+                                                                        th BILLING STAFF
+                                                                        th PROVIDER
+                                                                tbody
+                                                                    tr
+
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+                                                    .tab_content
+
+                                                    .tab_content
+
+
+                        .panel.panel-primary
+                    .tab_wrapper.first_tab
+                        ul.tab_list
+                            li Administrative 
+                        .content_wrapper
+                            .tab_content.active
+                                .card
+                                    .card-header
+                                        h3.card-title
+                                    .card-body.p-6
+                                        .panel.panel-primary
+                                            .tab_wrapper.first_tab
+                                                ul.tab_list
+                                                    li ADMISSION
+                                                    li ALOS
+                                                    li ADC ( AVERAGE DAILY CENSUS )
+                                                    li AGE GENDER SUMMARY 
+                                                    li DISHARGE TREND
+                                                    li DIAGNOSIS DISEASE
+                                                    li VISIT TYPE
+                                                    li MEDICATION DME ORDERS
+                                                    li ALIRTS
+                                                    li DAILY SUMMARY
+                                                    li PLACE OF SERVICE
+                                                    li PATIENT BY ZIP COUNTRY
+                                                    li PATIENT CENSUS HEATMAP
+                                                    li PATIENT BIRTHDAY
+                                                    li EMERGENCY DISASTER TRIAGE
+                                                    li PATIENT REFERRAL SOURCE
+                                                    li NPI LOOKUP
+                                                    li LEVEL OF CARE
+                                                    li OUTBOUND FAX
+                                                    li RX VENDOR
+                                                .content_wrapper
+                                                    .tab_content.active
+
+                                                        .row
+                                                            .col-md-3
+                                                                .form-group
+                                                                    label.form-label PERIOD FROM
+                                                                    input.form-control(type='text' name='example-disabled-input')
+                                                            .col-md-3
+                                                                .form-group
+                                                                    label.form-label PERIOD TO
+                                                                    input.form-control(type='text' name='example-disabled-input')
+                                                            .col-md-3
+                                                                .form-group
+                                                                    label.form-label PAYER NAME
+                                                                    input.form-control(type='text' name='example-disabled-input')
+                                                            .col-md-3
+                                                                .ml-auto
+                                                                    .input-group
+                                                                        a.btn.btn-success.text-white.mr-2(href='#')
+                                                                            span
+                                                                                i.fa.fa-plus
+                                                                                |  SEARCH
+                                                        br
+
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                                                            thead.bg-danger.text-white
+                                                                tr
+                                                                    th.text-white NEW ADMISSION DURING PERIOD
+
+                                                                
+                                                        br
+
+
+                                                        .table-responsive
+                                                            table.table.table-striped.table-bordered.text-nowrap
+                                                                thead
+                                                                    tr
+
+                                                                        th NAME
+                                                                        th REFFERING / ATTENDING MD
+                                                                        th SOC
+                                                                        th EOC
+
+                                                                tbody
+                                                                    tr
+
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                                                            thead.bg-danger.text-white
+                                                                tr
+                                                                    th.text-white PATIENTS CARRIED OVER AT START OF PERIOD
+                                                        br
+
+                                                        
+                                                        .table-responsive
+                                                            table.table.table-striped.table-bordered.text-nowrap
+                                                                thead
+                                                                    tr
+
+                                                                        th NAME
+                                                                        th REFFERING / ATTENDING MD
+                                                                        th SOC
+                                                                        th EOC
+
+                                                                tbody
+                                                                    tr
+
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                                                            thead.bg-danger.text-white
+                                                                tr
+                                                                    th.text-white RE-ADMISSION WITH A NEW BENEFIT PERIOD
+
+
+                                                        br
+                                                        .table-responsive
+                                                            table.table.table-striped.table-bordered.text-nowrap
+                                                                thead
+                                                                    tr
+
+                                                                        th NAME
+                                                                        th REFFERING / ATTENDING MD
+                                                                        th SOC
+                                                                        th EOC
+
+                                                                tbody
+                                                                    tr
+
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+
+                                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                                                            thead.bg-danger.text-white
+                                                                tr
+                                                                    th.text-white TRANSFER FROM ANOTHER HOSPICE
+                                                        br
+                                                        .table-responsive
+                                                            table.table.table-striped.table-bordered.text-nowrap
+                                                                thead
+                                                                    tr
+
+                                                                        th NAME
+                                                                        th REFFERING / ATTENDING MD
+                                                                        th SOC
+                                                                        th EOC
+
+                                                                tbody
+                                                                    tr
+
+                                                                        td
+                                                                        td
+                                                                        td
+                                                                        td
+
+
+
+
+                                                    .tab_content
+
+                                                    .tab_content
+
+
+
+
+
+
+                    .panel.panel-primary
+                        .tab_wrapper.first_tab
+                            ul.tab_list
+                                li BEREAVEMENT
+                            .content_wrapper
+                                .tab_content.active
+                                    .card
+                                        .card-header
+                                            h3.card-title
+                                        .card-body.p-6
+                                            .panel.panel-primary
+                                                .tab_wrapper.first_tab
+                                                    ul.tab_list
+                                                        li BEREAVEMENT CALENDAR
+                                                        li BEREAVEMENT RISK REPORT
+                                                        li BEREAVEMENT LETTER TRACKING
+                                                        li EDIT BEREAVEMENT LETTER
+
+                                                    .content_wrapper
+                                                        .tab_content.active
+                                                            #calendar
+                                                        .tab_content
+
+                                                        .tab_content
+
+
+
+
+
+
+                    .panel.panel-primary
+                        .tab_wrapper.first_tab
+                            ul.tab_list
+                                li QUALITY ASSURANCE
+                            .content_wrapper
+                                .tab_content.active
+                                    .card
+                                        .card-header
+                                            h3.card-title
+                                        .card-body.p-6
+                                            .panel.panel-primary
+                                                .tab_wrapper.first_tab
+                                                    ul.tab_list
+                                                        li CREATE IDG NOTES / GROUPS
+                                                        li IDG MEETINGS
+
+
+                                                    .content_wrapper
+                                                        .tab_content.active
+                                                            .row
+                                                                .col-md-6
+                                                                    .form-group
+                                                                        label.form-label SELECT PATIENT GROUP
+                                                                        input.form-control(type='text' name='example-disabled-input')
+                                                                .col-md-6
+                                                                    br
+                                                                    
+                                                                    a.btn.btn-success.text-white.mr-2(href='#')
+                                                                        span
+                                                                            i.fa.fa-plus
+                                                                            |  CREATE GROUP IDG
+                                                            br
+                                                            br
+                                                            .table-responsive
+                                                                table.table.table-striped.table-bordered.text-nowrap
+                                                                    thead
+                                                                        tr
+
+                                                                            th MR NO
+                                                                            th PATIENT NAME
+                                                                            th LAST IDG
+
+                                                                    tbody
+                                                                        tr
+
+                                                                            td
+                                                                            td
+                                                                            td
+
+
+                                                            br
+                                                            br
+
+                                                            .table-responsive
+                                                                table.table.table-striped.table-bordered.text-nowrap
+                                                                    thead
+                                                                        tr
+
+                                                                            th MR NO
+                                                                            th PATIENT NAME
+                                                                            th LAST IDG
+
+                                                                    tbody
+                                                                        tr
+
+                                                                            td
+                                                                            td
+                                                                            td
+
+
+
+                                                        .tab_content
+
+                                                        .tab_content
+
+
+
+                    .panel.panel-primary
+                        .tab_wrapper.first_tab
+                            ul.tab_list
+                                li IDG
+                            .content_wrapper
+                                .tab_content.active
+                                    .card
+                                        .card-header
+                                            h3.card-title
+                                        .card-body.p-6
+                                            .panel.panel-primary
+                                                .tab_wrapper.first_tab
+                                                    ul.tab_list
+                                                        li CREATE IDG NOTES / GROUPS
+                                                        li IDG MEETINGS
+
+
+                                                    .content_wrapper
+                                                        .tab_content.active
+
+                                                        .tab_content
+
+                                                        .tab_content

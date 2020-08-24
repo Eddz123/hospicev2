@@ -1,0 +1,921 @@
+extends ../../../templates/layout
+
+block content
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='/nursing/assessment-list') Home
+            li.breadcrumb-item.active(aria-current='page') Add Spiritual Assessment
+        // End breadcrumb
+        .ml-auto
+            .btn-list
+                a.btn.btn-facebook.text-white(type='button')
+                    i.fa.fa-print.mr-2
+                    | Print
+                a.btn.btn-github.text-white(type='button')
+                    i.fa.i.fa.fa-refresh.mr-2
+                    | Import Previous Assessment
+                a.btn.btn-twitter.text-white(type='button')
+                    i.fa.fa-save.mr-2
+                    | Save / Update
+                a.btn.btn-instagram.text-white(type='button')
+                    i.fa.fa-close.mr-2
+                    | Cancel
+
+    // End page-header
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header.custom-header
+                    div
+                        h3.card-title SPIRITUAL ASSESSMENT INFORMATION
+                .card-body
+                    form(action='#')
+                    .table-responsive
+                        table.table.table-bordered.text-nowrap.mb-0
+                            tbody
+                                tr
+                                    td
+                                        .row
+                                            .col-md-12
+                                                .form-group
+                                                    label.form-label ATTACH DOCUMENT
+                                                    input.dropify(type='file')
+                    br
+
+                    .table-responsive
+                        table.table.table-bordered.text-nowrap.mb-0
+                            tbody
+                                tr
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label ENTERED BY
+                                                    input.form-control(type='text' name='patientfname' placeholder='Enter Patient First Name')
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label STAFF ASSIGN
+                                                    input.form-control(type='text' name='patientmname' placeholder='Enter Patient Middle Name')
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label CONTROL NO
+                                                    input.form-control(type='text' name='patientno' disabled)
+                    br
+
+                    .table-responsive
+                        table.table.table-bordered.text-nowrap.mb-0
+                            tbody
+                                tr
+                                    td
+
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label DISCIPLINE
+                                                    select#select-gender.form-control.custom-select(name='patientgender')
+                                                        option(value='br' name='' selected ) CHOOSE GENDER
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label CARE LEVEL
+                                                    select#select-gender.form-control.custom-select(name='patientgender')
+                                                        option(value='br' name='' selected ) CHOOSE GENDER
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label TYPE OF
+                                                    select#select-gender.form-control.custom-select(name='patientgender')
+                                                        option(value='br' name='' selected ) CHOOSE GENDER
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label VISIT
+                                                    select#select-gender.form-control.custom-select(name='patientgender')
+                                                        option(value='br' name='' selected ) CHOOSE GENDER
+
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label REASON FOR VISIT
+                                                    select#select-gender.form-control.custom-select(name='patientgender')
+                                                        option(value='br' name='' selected ) CHOOSE GENDER
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label VISIT DATE
+                                                    select#select-gender.form-control.custom-select(name='patientgender')
+                                                        option(value='br' name='' selected ) CHOOSE GENDER
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label TIME IN
+                                                    .wd-150.mg-b-30
+                                                        .input-group
+                                                            .input-group-prepend
+                                                                .input-group-text
+                                                                    i.fa.fa-clock-o.tx-16.lh-0.op-6
+                                                            input#tpBasic.form-control(placeholder='Set Time In' type='text')
+
+
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label TIME OUT
+                                                    .wd-150.mg-b-30
+                                                        .input-group
+                                                            .input-group-prepend
+                                                                .input-group-text
+                                                                    i.fa.fa-clock-o.tx-16.lh-0.op-6
+                                                            input#tpBasic.form-control(placeholder='Set Time Out' type='text')
+                                            .col-md-4
+                                                .form-group
+                                                    label.form-label DURATION
+                                                    .wd-150.mg-b-30
+                                                        .input-group
+                                                            .input-group-prepend
+                                                                .input-group-text
+                                                                    i.fa.fa-clock-o.tx-16.lh-0.op-6
+                                                            input#tpBasic.form-control(placeholder='This Will Reflect In Your Time In And Time Out' type='text' disabled)
+                    br
+
+                    .row
+                        .col-xl-6.col-lg-6.col-md-6
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title PAIN
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+                                    .row
+                                        .col-md-6
+                                            .form-group
+                                                label.form-label IS PAIN CONTROLLED AT A COMPORTABLE LEVEL ?
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) Choose One
+                                        .col-md-6
+                                            .form-group
+                                                label.form-label IF NO , PAIN LEVEL ?
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) Choose One
+                                    .row
+                                        .col-md-6
+                                            .form-group
+
+                                        .col-md-6
+                                            .form-group.text-center
+                                                a.form-label(href='assets/pdf/pain-scale.pdf')  PAIN ASSESSMENT TOOL
+
+
+
+                        .col-xl-6.col-lg-6.col-md-6
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title DELIVERY OF CARE
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+                                    .row
+                                        .col-md-6
+                                            .form-group
+                                                label.form-label SPIRITUAL CARE DECLINED BY PATIENT / FAMILY ?
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) Choose One
+                                        .col-md-6
+                                            .form-group
+                                                label.form-label SPIRITUAL CARE DECLINED BY PATIENT / FAMILY ?
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) Choose One
+                                    .row
+                                        .col-md-12
+                                            .form-group
+                                                .alert.alert-info
+                                                    button.close(type='button' data-dismiss='alert' aria-hidden='true')
+                                                    strong
+                                                    hr.message-inner-separator
+                                                    p If Yes, continue with assessment – section 3 If No, indicate who will deliver spiritual care and gather contact information unless declined by patient / family
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label NAME
+                                                input.form-control(type='text' name='patientdenomination' placeholder='Enter Name')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label RELATION
+                                                input.form-control(type='text' name='patientdenomination' placeholder='Enter Relation')
+                                        .col-md-4
+                                            .form-group
+                                                label.form-label PHONE NUMBER
+                                                input.form-control(type='text' name='patientdenomination' placeholder='Enter Phone Number')
+
+                    .row
+                        .col-xl-6.col-lg-6.col-md-6
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title SPIRITUAL CIRCUMSTANCES
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+                                    .table-responsive
+                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                            tbody
+                                                tr
+                                                    th(scope='row')
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label OBSERVED PATIENT MENTAL STATUS
+                                                                    select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                        option(value='br' name='' selected ) CHOOSE ONE
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label HISTORIAN
+                                                                    select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                        option(value='br' name='' selected ) CHOOSE ONE
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label IF OTHER NAME
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label RELATION
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label MARITAL STATUS
+                                                                    select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                        option(value='br' name='' selected ) CHOOSE ONE
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label NUMBER OF CHILDREN UNDER 21
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label NUMBER OF CHILDREN LIVING IN PATIENT'S HOME
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                    br
+                                    .table-responsive
+                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                            tbody
+                                                tr
+                                                    th(scope='row')
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    label.form-label.text-center PATIENT FAITH COMMUNITY INFORMATION
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label FAITH
+                                                                    select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                        option(value='br' name='' selected ) CHOOSE ONE
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label DENOMINATION
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label NAME OF FAITH COMMUNITY
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label INVOLVEMENT
+                                                                    select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                        option(value='br' name='' selected ) CHOOSE ONE
+
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    label.form-label ADDRESS
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label NAME OF CLERGY
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label PHONE
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                    br
+
+
+                                    .table-responsive
+                                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                            tbody
+                                                tr
+                                                    th(scope='row')
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    label.form-label.text-center PATIENT FAITH COMMUNITY INFORMATION
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label FAITH
+                                                                    select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                        option(value='br' name='' selected ) CHOOSE ONE
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label DENOMINATION
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label NAME OF FAITH COMMUNITY
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label INVOLVEMENT
+                                                                    select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                        option(value='br' name='' selected ) CHOOSE ONE
+
+                                                        .row
+                                                            .col-md-12
+                                                                .form-group
+                                                                    label.form-label ADDRESS
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label NAME OF CLERGY
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.form-label PHONE
+                                                                    input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+
+                                        br
+
+                                        .table-responsive
+                                            table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                tbody
+                                                    tr
+                                                        th(scope='row')
+                                                            .row
+                                                                .col-md-12
+                                                                    .form-group
+                                                                        label.form-label.text-center SPIRITUAL AND CULTURAL INFLUENCES
+                                                            .row
+                                                                .col-md-12
+                                                                    .form-group
+                                                                        label.form-label FAITH IS PRIMARY FACTOR IN MAKING HEALTHCARE DECISION FOR
+                                                                        select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                            option(value='br' name='' selected ) CHOOSE ONE
+                                                            .row
+                                                                .col-md-12
+                                                                    .form-group
+                                                                        label.form-label CULTURAL TRADITIONS ARE A PRIMARY FACTORY IN MAKING HEALTHCARE DECISION FOR
+                                                                        select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                            option(value='br' name='' selected ) CHOOSE ONE
+
+                                        br
+
+                                        .table-responsive
+                                            table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                tbody
+                                                    tr
+                                                        th(scope='row')
+                                                            .row
+                                                                .col-md-12
+                                                                    .form-group
+                                                                        label.form-label.text-center SPIRITUAL SUPPORT
+                                                            .row
+                                                                .col-md-4
+                                                                    .form-group
+                                                                        .custom-controls-stacked
+                                                                            label.custom-control.custom-checkbox
+                                                                                input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                                span.custom-control-label FAITH COMMUNITY
+                                                                            label.custom-control.custom-checkbox
+                                                                                input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                                span.custom-control-label FAMILY
+                                                                .col-md-4
+                                                                    .form-group
+                                                                        .custom-controls-stacked
+                                                                            label.custom-control.custom-checkbox
+                                                                                input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                                span.custom-control-label PRAYER MEDITATION
+                                                                            label.custom-control.custom-checkbox
+                                                                                input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                                span.custom-control-label FRIENDS
+                                                                .col-md-4
+                                                                    .form-group
+                                                                        .custom-controls-stacked
+                                                                            label.custom-control.custom-checkbox
+                                                                                input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                                span.custom-control-label FAITH IN GOD
+                                                                            label.custom-control.custom-checkbox
+                                                                                input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                                span.custom-control-label PETS
+                                                            .row
+                                                                .col-md-4
+                                                                    .form-group
+                                                                        .custom-controls-stacked
+                                                                            label.custom-control.custom-checkbox
+                                                                                input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                                span.custom-control-label SCRIPTURE READING
+                                                                            label.custom-control.custom-checkbox
+                                                                                input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                                span.custom-control-label ETHNIC COMMUNITY
+                                                                .col-md-4
+                                                                    .form-group
+                                                                        .custom-controls-stacked
+                                                                            label.custom-control.custom-checkbox
+                                                                                input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                                span.custom-control-label ART / MUSIC / LITERATURE
+                                                                            label.custom-control.custom-checkbox
+                                                                                input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                                                span.custom-control-label NATURE
+                                                            .row
+                                                                .col-md-12
+                                                                    .form-group
+                                                                        label.form-label IF OTHER PLEASE SPECIFY HERE
+                                                                        textarea.form-control(name='example-textarea-input' rows='4' placeholder='SPECIFY HERE')
+
+
+
+
+
+
+                        .col-xl-6.col-lg-6.col-md-6
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title PATIENT - SPIRITUAL DISTRESS / CONCERN
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+                                    .row
+                                        .col-md-12
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label CHECK HERE IF THE PATIENT IS UNRESPONSIVE
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label LOSS OF FAITH
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label LOSS OF FAITH IN COMMUNITY
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label DEPRESSION
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label ANXIETY
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label ANGER AT GOOD
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label NEED TO GIVE / RECEIVE FORGIVENESS OF SELF
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label DENYING REALITY
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label WITHDRAWAL
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label LOSS OF SELF WORTH
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label CONCERN ABOUT AFTERLIFE
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label SUICIDAL THOUGHTS
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label UNFINISHED BUSSINESS
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label CONCERNED ABOUT THOSE LEFT BEHIND
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label FAMILY STRESS CONFLICT
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label ANTICIPATORY GRIEF
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label LONELINESS
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label RELATIONSHIP FOR RECONCILLATION
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label SOCIAL ISOLATION
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label PAIN & SUFFERING
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label HOPLESSNESS
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label ANGER
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label GRIEVING
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label FEAR
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label GUILT
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label POWERLESSNESS
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label PAIN & SUFFERING
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label DIAGNOSIS / PROGNOSIS
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label DYING
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label SUBSTANCE ABUSE
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label LOSS OF INDEPENDENCE
+                                    .row
+                                        .col-md-12
+                                            .form-group
+                                                label.form-label IF OTHER LOSSES PLEASE SPECIFY HERE
+                                                textarea.form-control(name='example-textarea-input' rows='4' placeholder='SPECIFY HERE')
+                                    .row
+                                        .col-md-12
+                                            .form-group
+                                                label.form-label IF OTHER PLEASE SPECIFY HERE
+                                                textarea.form-control(name='example-textarea-input' rows='4' placeholder='SPECIFY HERE')
+                                    .row
+                                        .col-md-12
+                                            .form-group
+                                                label.form-label SPIRITUAL DISTRESS RATING
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) CHOOSE RATING
+                                    .row
+
+                                        .col-md-4
+                                            .form-group.text-center
+                                                label.form-label RATED BY
+                                        .col-md-4
+                                            .form-group.text-center
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label PATIENT
+                                        .col-md-4
+                                            .form-group.text-center
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label CLINICIAN / SC
+
+
+
+
+
+                    .row
+                        .col-xl-6.col-lg-6.col-md-6
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title PCG - SPIRITUAL DISTRESS CONCERN
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label LOSS OF FAITH
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label LOSS OF FAITH IN COMMUNITY
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label DEPRESSION
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label ANXIETY
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label ANGER AT GOOD
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label NEED TO GIVE / RECEIVE FORGIVENESS OF SELF
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label DENYING REALITY
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label WITHDRAWAL
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label LOSS OF SELF WORTH
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label CONCERN ABOUT AFTERLIFE
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label SUICIDAL THOUGHTS
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label UNFINISHED BUSSINESS
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label CONCERNED ABOUT THOSE LEFT BEHIND
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label FAMILY STRESS CONFLICT
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label ANTICIPATORY GRIEF
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label LONELINESS
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label RELATIONSHIP FOR RECONCILLATION
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label SOCIAL ISOLATION
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label PAIN & SUFFERING
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label HOPLESSNESS
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label ANGER
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label GRIEVING
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label FEAR
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label GUILT
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label POWERLESSNESS
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label PAIN & SUFFERING
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label DIAGNOSIS / PROGNOSIS
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label DYING
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label SUBSTANCE ABUSE
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label LOSS OF INDEPENDENCE
+                                    .row
+                                        .col-md-12
+                                            .form-group
+                                                label.form-label IF OTHER LOSSES PLEASE SPECIFY HERE
+                                                textarea.form-control(name='example-textarea-input' rows='4' placeholder='SPECIFY HERE')
+                                    .row
+                                        .col-md-12
+                                            .form-group
+                                                label.form-label IF OTHER PLEASE SPECIFY HERE
+                                                textarea.form-control(name='example-textarea-input' rows='4' placeholder='SPECIFY HERE')
+                                    .row
+                                        .col-md-12
+                                            .form-group
+                                                label.form-label SPIRITUAL DISTRESS RATING
+                                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                    option(value='br' name='' selected ) CHOOSE RATING
+                                    .row
+
+                                        .col-md-4
+                                            .form-group.text-center
+                                                label.form-label RATED BY
+                                        .col-md-4
+                                            .form-group.text-center
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label PATIENT
+                                        .col-md-4
+                                            .form-group.text-center
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label CLINICIAN / SC
+
+
+                        .col-xl-6.col-lg-6.col-md-6
+                            .card.card-collapsed
+                                .card-header
+                                    h3.card-title CARE PROVIDED AND NARATIVE REPORT
+                                    .card-options
+                                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                                            i.fe.fe-chevron-up
+                                .card-body
+                                    .row
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label LISTENING / EMOTIONAL
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label SCRIPTURE READING
+
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label PRAYER / MEDITATION
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label RITES / COMMUNION
+
+                                        .col-md-4
+                                            .form-group
+                                                .custom-controls-stacked
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label ANOINTING & BLESSING
+                                                    label.custom-control.custom-checkbox
+                                                        input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                        span.custom-control-label FUNERAL PLANNING
+
+
+                                    .row
+                                        .col-md-12
+                                            .form-group
+                                                label.form-label IF OTHER PLEASE SPECIFY HERE
+                                                textarea.form-control(name='example-textarea-input' rows='4' placeholder='SPECIFY HERE')
+
+
+                    .row
+                        .col-xl-12.col-lg-12.col-md-12
+                            .alert.alert-warning
+                                button.close(type='button' data-dismiss='alert' aria-hidden='true')
+                                strong UNRESSOLVED ISSUES
+                                hr.message-inner-separator
+                                .alert.alert-light
+                                    .row
+                                        .table-responsive.text-center
+                                            table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                                thead.bg-primary.text-white
+                                                    tr
+                                                        th.text-white ID
+                                                        th.text-white MRNO
+                                                        th.text-white ISSUES DETECTED
+
+                                                tbody
+                                                    tr
+                                                        th(scope='row')
+                                                        th(scope='row')
+                                                        th(scope='row')
+                    .row
+                        .col-md-6
+                            .btn-list.text-left
+                                a.btn.btn-primary.text-white(type='button')
+                                    i.fa.fa-commenting.mr-2
+                                    | FOR Q / A
+                                a.btn.btn-dark.text-white(type='button')
+                                    i.fa.fa-pencil.mr-2
+                                    | PATIENT SIGNATURE
+                        .col-md-6
+                            .btn-list.text-right
+                                a.btn.btn-danger.text-white(type='button')
+                                    i.fa.fa-eye.mr-2
+                                    | SUBMIT FOR REVIEW
+
+
+
+
+
+
+                    br
+
+
+

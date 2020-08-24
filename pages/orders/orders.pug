@@ -1,0 +1,152 @@
+extends ../../templates/layout
+
+block content
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') Home
+            li.breadcrumb-item.active(aria-current='page')=title
+    .row
+        .card
+            .card-header
+                h3.card-title 
+            .card-body.p-6
+                .panel.panel-primary
+                    .tab_wrapper.first_tab
+                        ul.tab_list
+                            li PATIENT ORDERS
+                            li ORDERS DELIVERY
+                            li PAID ORDERS
+                        .content_wrapper
+                            .tab_content.active
+                                .table-responsive
+                                    table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                        tbody
+                                            tr
+
+                                                td
+                                                    .row
+                                                        .col-md-6
+                                                            
+                                                        .col-md-6
+                                                            .form-group
+                                                                label.form-label PATIENT NAME
+                                                                select#select-countries.form-control.custom-select(name="Select")
+                                                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                                br
+                                .col-md-12
+                                    .table-responsive
+                                        table#example1.table.table-striped.table-bordered.text-nowrap
+                                            thead
+                                                tr
+
+                                                    th ORDER ID
+                                                    th ORDER DATE
+                                                    th ORDER ITEM
+                                                    th ORDER QUANTITY
+                                                    th ORDER BY
+                                                    th OPTIONS
+
+
+                                            tbody
+                                                tr
+
+                                                    td 1212121221
+                                                    td 03/26/2020
+                                                    td Azithromycin (Zithromax)	
+                                                    td 6 Tablets
+                                                    td Patel Raju
+                                                    td
+                                                        a.btn.btn-sm.btn-success(href='#')
+                                                            i.si.si-check
+                                                            |  APPROVED
+
+
+                            .tab_content
+                                .table-responsive
+                                    table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                        tbody
+                                            tr
+
+                                                td
+                                                    .row
+                                                        .col-md-6
+
+                                                        .col-md-6
+                                                            .form-group
+                                                                label.form-label PATIENT NAME
+                                                                select#select-countries.form-control.custom-select(name="Select")
+                                                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                                br
+                                .col-md-12
+                                    .table-responsive
+                                        table#example4.table.table-striped.table-bordered.text-nowrap
+                                            thead
+                                                tr
+
+                                                    th ORDER ID
+                                                    th ORDER DATE
+                                                    th ORDER ITEM
+                                                    th ORDER QUANTITY
+                                                    th DELIVERY DATE
+
+
+
+                                            tbody
+                                                tr
+
+                                                    td 1212121221
+                                                    td 03/26/2020
+                                                    td Azithromycin (Zithromax)
+                                                    td 6 Tablets
+                                                    td Patel Raju
+                                                    
+
+
+                            .tab_content
+                                .table-responsive
+                                    table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                                        tbody
+                                            tr
+
+                                                td
+                                                    .row
+                                                        .col-md-6
+
+                                                        .col-md-6
+                                                            .form-group
+                                                                label.form-label PATIENT NAME
+                                                                select#select-countries.form-control.custom-select(name="Select")
+                                                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                                br
+                                .col-md-12
+                                    .table-responsive
+                                        table#example5.table.table-striped.table-bordered.text-nowrap
+                                            thead
+                                                tr
+
+                                                    th ORDER ID
+                                                    th ORDER DATE
+                                                    th ORDER ITEM
+                                                    th ORDER QUANTITY
+                                                    th DELIVERY DATE
+                                                    th PAID DATE
+
+
+                                            tbody
+                                                tr
+
+                                                    td 1212121221
+                                                    td 03/26/2020
+                                                    td Azithromycin (Zithromax)
+                                                    td 6 Tablets
+                                                    td Patel Raju
+                                                    td Patel Raju
+                                                       

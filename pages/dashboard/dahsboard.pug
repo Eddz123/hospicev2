@@ -1,0 +1,168 @@
+extends ../../templates/layout
+
+block content
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') Home
+            li.breadcrumb-item.active(aria-current='page')=title
+        // End breadcrumb
+    .row
+        .col-sm-12.col-md-6.col-lg-6.col-xl-3
+            .card.overflow-hidden
+                .card-header.custom-header
+                    div
+                        h3.card-title New Patient
+                        h6.card-subtitle Overview of this month
+                    .card-options
+                        label.custom-switch
+                            input.custom-switch-input(type='checkbox', name='custom-switch-checkbox')
+                            span.custom-switch-indicator
+                .card-body
+                    .d-flex
+                        div
+                            h5.text-muted Total
+                            h2.text-dark.count.mt-0.font-30.mb-0 3
+                        span.sparkline_bar2.ml-auto
+                .card-footer
+                    span.text-left
+                        i.si.si-user.text-success.mr-1
+                        |  1 Male
+                    span.float-right
+                        i.si.si-user-female.text-danger.mr-1
+                        |  2 Female
+        //  col end
+        .col-sm-12.col-md-6.col-lg-6.col-xl-3
+            .card.overflow-hidden
+                .card-header.custom-header
+                    div
+                        h3.card-title New Established
+                        h6.card-subtitle Overview of this Day
+                    .card-options
+                        label.custom-switch
+                            input.custom-switch-input(type='checkbox', name='custom-switch-checkbox')
+                            span.custom-switch-indicator
+                .card-body
+                    .d-flex
+                        div
+                            h5.text-muted Total
+                            h2.text-dark.count.mt-0.font-30.mb-0 15
+                        span.sparkline_bar2.ml-auto
+                .card-footer
+                    span.text-left
+                        i.si.si-user.text-success.mr-1
+                        |  8 Male
+                    span.float-right
+                        i.si.si-user-female.text-danger.mr-1
+                        |  7 Female
+        //  col end 
+        .col-sm-12.col-md-6.col-lg-6.col-xl-3
+            .card.overflow-hidden
+                .card-header.custom-header
+                    div
+                        h3.card-title New Employess
+                        h6.card-subtitle Overview of this Day
+                    .card-options
+                        label.custom-switch
+                            input.custom-switch-input(type='checkbox', name='custom-switch-checkbox')
+                            span.custom-switch-indicator
+                .card-body
+                    .d-flex
+                        div
+                            h5.text-muted Total
+                            h2.text-dark.count.mt-0.font-30.mb-0 5
+                        span.sparkline_bar2.ml-auto
+                .card-footer
+                    span.text-left
+                        i.si.si-user.text-success.mr-1
+                        |  2 Male
+                    span.float-right
+                        i.si.si-user-female.text-danger.mr-1
+                        |  3 Female
+        //  col end 
+        .col-sm-12.col-md-6.col-lg-6.col-xl-3
+            .card.overflow-hidden
+                .card-header.custom-header
+                    div
+                        h3.card-title Billed Patients
+                        h6.card-subtitle Overview of this Month
+                    .card-options
+                        label.custom-switch
+                            input.custom-switch-input(type='checkbox', name='custom-switch-checkbox')
+                            span.custom-switch-indicator
+                .card-body
+                    .d-flex
+                        div
+                            h5.text-muted Total
+                            h2.text-dark.count.mt-0.font-30.mb-0 8
+                        span.sparkline_bar2.ml-auto
+                .card-footer
+                    span.text-left
+                        i.si.si-user.text-success.mr-1
+                        |  3 Male
+                    span.float-right
+                        i.si.si-user-female.text-danger.mr-1
+                        |  5 Female
+        //  col end
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header.custom-header
+                    div
+                        h3.card-title Patient Active And Discharge Year Of 2020
+                        h6.card-subtitle Overview of this year live charts
+                    .card-options
+                        a.mr-4.text-default(href, data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='true')
+                            span.fa.fa-ellipsis-v
+                        ul.dropdown-menu.dropdown-menu-right(role='menu')
+                            li
+                                a(href='#')
+                                    i.si.si-plus.mr-2
+                                    | Add
+                            li
+                                a(href='#')
+                                    i.si.si-trash.mr-2
+                                    | Remove
+                            li
+                                a(href='#')
+                                    i.si.si-eye.mr-2
+                                    | View
+                            li
+                                a(href='#')
+                                    i.si.si-settings.mr-2
+                                    | More
+                .card-body
+                    .row
+                        .col-xl-9.col-lg-12.col-md-12.border-right
+                            
+                        .col-xl-3.collg-12.col-md-12
+                            .clearfix.mb-4
+                                .float-left
+                                    h2.mb-0.text-primary.mainvalue.mb-2 100
+                                    p.text-muted Active Patients
+                                .float-right.text-right.mt-1
+                                    span.pie(data-peity='{ "fill": ["#f0f3f7", "#1753fc"]}') 2/5
+                            .clearfix.mb-4
+                                .float-left
+                                    h2.mb-0.text-danger.mainvalue.mb-1 5
+                                    p.text-muted Discharge Patients
+                                .float-right.text-right.mt-1
+                                    span.pie(data-peity='{ "fill": ["#ff6666", "#f0f3f7"]}') 226,134
+                            .text-center
+                                a.btn.btn-primary.btn-block(href='#') View more
+    .row
+        .col-md-6
+            .card
+                .card-header
+                    h3.mb-0.card-title
+                .card-body
+                    #calendar
+        .col-md-6
+            .card
+                .card-header
+                    h3.mb-0.card-title
+                .card-body
+                    #calendar2
+
+    

@@ -1,0 +1,460 @@
+extends ../../../templates/layout
+
+block content
+
+
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') Assessment And Visits
+            li.breadcrumb-item.active(aria-current='page') Volunteer Visit
+        // End breadcrumb
+        .ml-auto
+            .input-group
+                a.btn.btn-success.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-plus
+                        |  Save Assessment
+                a.btn.btn-danger.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-trash
+                        |  Delete
+                a.btn.btn-primary.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-backward
+                        |  Back
+    // End page-header
+
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title Attach Document
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-12
+                            .form-group
+                                input.dropify(type='file')
+
+
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title Volunteer Visit Notes Assessment
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-4
+                            .form-group
+                                label.form-label Entered By :
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Care Level
+                                input.form-control(type='text' name='example-disabled-input')
+                            .form-group
+                                label.form-label Time In
+                                input.form-control(type='text' name='example-disabled-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label Staff Assigned
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Visit Date
+                                input.form-control(type='text' name='example-disabled-input')
+                            .form-group
+                                label.form-label Time Out
+                                input.form-control(type='text' name='example-disabled-input' )
+                        .col-md-4
+                            .form-group
+                                label.form-label Discipline
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Type Of Visit
+                                select#select-countries.form-control.custom-select(name="Select")
+                                    option(value="br" data-data='{"image": "../assets/images/flag/flags/br.svg"}' selected="") Select
+                                    option(value="cz" data-data='{"image": "../assets/images/flag/flags/cz.svg"}') Short
+                                    option(value="de" data-data='{"image": "../assets/images/flag/flags/de.svg"}') Long
+                            .form-group
+                                label.form-label Overall Duration
+                                input.form-control(type='text' name='example-disabled-input')
+
+                    
+
+
+
+    .row
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Patient Service
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                            thead.bg-danger.text-white
+                                tr
+                                    th.text-white.text-center   Assigned Task
+                                    th.text-white.text-center   To be checked by VOL upon completion of the assigned tasks
+                            thead.bg-success.text-white
+                                tr
+                                    th.text-white.text-center   Provide Service checked below	
+                                    th.text-white.text-center
+
+                            tbody
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Companionship (reading/letter writing, music, caring touch )
+                                            
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Socialization
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Meal Delivery
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Transportation
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Light House Keeping
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Light House Keeping
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Caregiver Respite	
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Supportive Presence
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Memory Support
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Spiritual Support
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Volunteer Support ( as needed )
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Massage, Beautification & Complimentary Therapy ( Cert Professional )
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Support at time of death
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+                                tr
+
+                                    td
+                                        .row
+                                            .col-md-4
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label Other ( see VC Instruction below )
+
+                                    td
+                                        .row
+                                            .col-md-12.text-center
+                                                .form-group
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                            span.custom-control-label
+
+
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Pain Changes In Condition
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+
+        .col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Rn Additional Instructions
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap.table-bordered
+                            thead.bg-success.text-white
+                                tr
+                                    th.text-white.text-center
+                                        .row.text-center
+                                            .col-md-12
+                                                .form-group
+                                                    label.form-label Specify Instructions Here
+                                                        textarea.form-control(name='example-textarea-input', rows='4', placeholder='text here..')
+                                    th.text-white
+                                        .row.text-center
+                                            .col-md-12
+                                                .form-group
+                                                    label.form-label Specify Instructions Here
+                                                        textarea.form-control(name='example-textarea-input', rows='4', placeholder='text here..')
+
+
+                            
+
+                                
+
+                    
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+

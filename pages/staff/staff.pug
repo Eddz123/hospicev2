@@ -1,0 +1,170 @@
+extends ../../templates/layout
+
+block content
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') Home
+            li.breadcrumb-item.active(aria-current='page')=title
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-body
+                    .panel.panel-primary
+                        .tab-menu-heading
+                            .tabs-menu1
+                                // Tabs
+                                ul.nav.panel-tabs
+                                    li
+                                        a.active(href='#tab5' data-toggle='tab') EMPLOYEE
+                                    li
+                                        a(href='#tab6' data-toggle='tab') VENDORS
+                                    li
+                                        a(href='#tab7' data-toggle='tab') INSURANCE
+
+                        .panel-body.tabs-menu-body
+                            .tab-content
+                                #tab5.tab-pane.active
+
+                                    .table-responsive
+                                        table.table.table-bordered.text-nowrap.mb-0
+
+                                            tbody
+                                                tr
+
+                                                    td.text-right
+                                                        a.btn.btn-app.btn-success.mr-2.mt-1.mb-1(href='/staff/new_employee')
+                                                            i.fa.fa-plus
+                                                            |  Add New Employee
+
+
+
+                                    br
+                                    br
+
+                                    .table-responsive
+                                        table#example.table.table-striped.table-bordered.text-nowrap.w-100
+                                            thead
+                                                tr
+                                                    th.wd-15p First name
+                                                    th.wd-15p Last name
+                                                    th.wd-20p Position
+                                                    th.wd-15p Start date
+                                                    th.wd-10p Salary
+                                                    th.wd-25p E-mail
+                                            tbody
+                                                tr
+                                                    td
+                                                        a(href='#') PRO12345
+                                                    td Chloe
+                                                    td System Developer
+                                                    td 2018/03/12
+                                                    td $654,765
+                                                    td b.Chloe@datatables.net
+                                                tr
+                                                    td
+                                                        a(href='#') PRO12345
+                                                    td Bond
+                                                    td Account Manager
+                                                    td 2012/02/21
+                                                    td $543,654
+                                                    td d.bond@datatables.net
+
+
+                                #tab6.tab-pane
+
+                                    .table-responsive
+                                        table.table.table-bordered.text-nowrap.mb-0
+
+                                            tbody
+                                                tr
+
+                                                    td.text-right
+                                                        a.btn.btn-app.btn-success.mr-2.mt-1.mb-1(href='/staff/new_insurance')
+                                                            i.fa.fa-plus
+                                                            |  Add New Vendors
+
+
+
+                                    br
+                                    br
+
+                                    .table-responsive
+                                        table#example.table.table-striped.table-bordered.text-nowrap.w-100
+                                            thead
+                                                tr
+                                                    th.wd-15p First name
+                                                    th.wd-15p Last name
+                                                    th.wd-20p Position
+                                                    th.wd-15p Start date
+                                                    th.wd-10p Salary
+                                                    th.wd-25p E-mail
+                                            tbody
+                                                tr
+                                                    td
+                                                        a(href='#') PRO12345
+                                                    td Chloe
+                                                    td System Developer
+                                                    td 2018/03/12
+                                                    td $654,765
+                                                    td b.Chloe@datatables.net
+                                                tr
+                                                    td
+                                                        a(href='#') PRO12345
+                                                    td Bond
+                                                    td Account Manager
+                                                    td 2012/02/21
+                                                    td $543,654
+                                                    td d.bond@datatables.net
+
+
+                                #tab7.tab-pane
+
+
+                                    .table-responsive
+                                        table.table.table-bordered.text-nowrap.mb-0
+
+                                            tbody
+                                                tr
+
+                                                    td.text-right
+                                                        a.btn.btn-app.btn-success.mr-2.mt-1.mb-1(href='/staff/new_insurance')
+                                                            i.fa.fa-plus
+                                                            |  Add New Insurance
+
+
+
+                                    br
+                                    br
+
+                                    .table-responsive
+                                        table#example.table.table-striped.table-bordered.text-nowrap.w-100
+                                            thead
+                                                tr
+                                                    th.wd-15p First name
+                                                    th.wd-15p Last name
+                                                    th.wd-20p Position
+                                                    th.wd-15p Start date
+                                                    th.wd-10p Salary
+                                                    th.wd-25p E-mail
+                                            tbody
+                                                tr
+                                                    td
+                                                        a(href='#') PRO12345
+                                                    td Chloe
+                                                    td System Developer
+                                                    td 2018/03/12
+                                                    td $654,765
+                                                    td b.Chloe@datatables.net
+                                                tr
+                                                    td
+                                                        a(href='#') PRO12345
+                                                    td Bond
+                                                    td Account Manager
+                                                    td 2012/02/21
+                                                    td $543,654
+                                                    td d.bond@datatables.net
+
+
+

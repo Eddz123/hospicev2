@@ -1,0 +1,151 @@
+extends ../../templates/layout
+
+block content
+    .container.content-area
+        .side-app
+            // page-header
+            .page-header
+                ol.breadcrumb
+                    // breadcrumb
+                    li.breadcrumb-item
+                        a(href='/staff') Home
+                    li.breadcrumb-item.active(aria-current='page') Staff
+                // End breadcrumb
+            // End page-header
+            .row
+                .col-xl-12.col-lg-12.col-md-12
+                    .card
+                        .card-body
+                            .panel.panel-primary
+                                .tab-menu-heading
+                                    .tabs-menu1
+                                        // Tabs
+                                        ul.nav.panel-tabs
+                                            li
+                                                a.active(href='#tab1' data-toggle='tab') ADD / UPDATE INSURANCE
+
+
+                                .panel-body.tabs-menu-body
+                                    .tab-content
+                                        #tab1.tab-pane.active
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+
+                                                            td.text-right
+                                                                a.btn.btn-app.btn-success.mr-2.mt-1.mb-1(href='#')
+                                                                    i.fa.fa-save
+                                                                    |  Save
+                                                                a.btn.btn-app.btn-danger.mr-2.mt-1.mb-1(href='/staff')
+                                                                    i.fa.fa-times
+                                                                    |  Cancel
+
+
+                                            br
+                                            br
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+                                                            td.btn-gray-dark.text-white
+                                                                h4
+                                                                    strong &#x2776; INSURANCE INFORMATION FORM
+
+
+                                            br
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+                                                            td
+                                                                .row
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label CONTROL NUMBER
+                                                                            input.form-control(type='text' name='insno' value='' required)
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label INSURANCE NAME
+                                                                            input.form-control(type='text' name='insname' placeholder='Enter INSURANCE NAME' value='' required)
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label SOURCE TYPE
+                                                                            select.custom-select
+                                                                                option(selected='') CHOOSE SOURCE TYPE
+                                                                                option(value='Male' name='ADMINISTRATOR') ADMINISTRATOR
+                                                                                option(value='Female' name='BC') BC
+                                                                                option(value='Gay' name='BSW') BSW
+                                                                                option(value='Gay' name='BSW') HA
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label ADDRESS / STREET / UNIT NUMBER
+                                                                            input.form-control(type='text' name='insaddress' placeholder='Enter ADDRESS / STREET / UNIT NUMBER' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label CITY
+                                                                            input.form-control(type='text' name='inscity' placeholder='Enter CITY' value='' required)
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label STATE
+                                                                            input.form-control(type='text' name='inscity' placeholder='Enter STATE' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label ZIP CODE
+                                                                            input.form-control(type='text' name='inszipcode' placeholder='Enter ZIP CODE' value='' required)
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label PHONE NUMBER 1
+                                                                            input.form-control(type='text' name='insphonenumber1' placeholder='Enter PHONE NUMBER 1' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label PHONE NUMBER 2 ( OPTIONAL )
+                                                                            input.form-control(type='text' name='insphonenumber2' placeholder='Enter PHONE NUMBER 2' value='' )
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label TELEPHONE NUMBER 1
+                                                                            input.form-control(type='text' name='instellnumber1' placeholder='Enter TELEPHONE NUMBER 1' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label TELEPHONE NUMBER 2 ( OPTIONAL )
+                                                                            input.form-control(type='text' name='instellnumber2' placeholder='Enter TELEPHONE NUMBER 2' value='' )
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label FAX NUMBER
+                                                                            input.form-control(type='text' name='insfaxnumber' placeholder='Enter FAX NUMBER' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label EMAIL ADDRESS
+                                                                            input.form-control(type='text' name='insemailaddress' placeholder='Enter EMAIL ADDRESS' value='' required)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

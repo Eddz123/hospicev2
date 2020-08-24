@@ -1,0 +1,166 @@
+extends ../../templates/layout
+
+block content
+    .container.content-area
+        .side-app
+            // page-header
+            .page-header
+                ol.breadcrumb
+                    // breadcrumb
+                    li.breadcrumb-item
+                        a(href='/patients') Home
+                    li.breadcrumb-item.active(aria-current='page') Add New Patient
+                .ml-auto
+                    .input-group
+                        a.btn.btn-success.text-white.mr-2(href='#')
+                            span
+                                i.fa.fa-plus
+                                |  Save
+                        a.btn.btn-primary.text-white.mr-2(href='/patients')
+                            span
+                                i.fa.fa-backward
+                                |  Back
+
+
+                // End breadcrumb
+            // End page-header
+            .row
+                .col-xl-12.col-lg-12.col-md-12
+                    .card
+                        .card-header.custom-header
+                            div
+                                h3.card-title PATIENT INFORMATION
+                        .card-body
+
+
+                            form(action='#')
+                            .table-responsive
+                                table.table.table-bordered.text-nowrap.mb-0
+                                    tbody
+                                        tr
+                                            td
+                                                .row
+                                                    .col-md-4
+
+                                                    .col-md-4
+
+                                                    .col-md-4
+                                                        .form-group
+                                                            label.form-label CONTROL NO
+                                                            input.form-control(type='text' name='patientno' disabled)
+                            br
+
+                            .table-responsive
+                                table.table.table-bordered.text-nowrap.mb-0
+                                    tbody
+                                        tr
+                                            td
+
+                                                .row
+                                                    .col-md-3
+                                                        .form-group
+                                                            label.form-label FIRST NAME
+                                                            input.form-control(type='text' name='patientfname' placeholder='Enter Patient First Name')
+                                                    .col-md-3
+                                                        .form-group
+                                                            label.form-label MIDDLE NAME
+                                                            input.form-control(type='text' name='patientmname' placeholder='Enter Patient Middle Name')
+                                                    .col-md-3
+                                                        .form-group
+                                                            label.form-label LAST NAME
+                                                            input.form-control(type='text' name='patientlname' placeholder='Enter Patient Last Name')
+                                                    .col-md-3
+                                                        .form-group
+                                                            label.form-label SUFFIX
+                                                            input.form-control(type='text' name='patientsuffix' placeholder='Enter Patient Last Name')
+                                                .row
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label ADDRESS 1
+                                                            input.form-control(type='text' name='patientaddress1' placeholder='Enter Patient Address')
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label ADDRESS 2 ( OPTIONAL )
+                                                            input.form-control(type='text' name='patientaddress2' placeholder='Enter Patient Address')
+                                                .row
+                                                    .col-md-4
+                                                        .form-group
+                                                            label.form-label STATE
+                                                            input.form-control(type='text' name='patientstate' placeholder='Enter Patient Last Name')
+                                                    .col-md-4
+                                                        .form-group
+                                                            label.form-label CITY
+                                                            input.form-control(type='text' name='patientcity' placeholder='Enter Patient Last Name')
+                                                    .col-md-4
+                                                        .form-group
+                                                            label.form-label ZIP CODE
+                                                            input.form-control(type='text' name='patientzipcode' placeholder='Enter Patient Last Name')
+                                                .row
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label DATE OF BIRTH
+                                                            .input-group
+                                                                .input-group-prepend
+                                                                    .input-group-text
+                                                                        i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                input.form-control.fc-datepicker(placeholder='MM / DD / YYYY' type='text')
+
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label AGE
+                                                            input.form-control(type='text' name='patientstate' placeholder='Enter Patient Age')
+                                                .row
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label GENDER
+                                                            select#select-gender.form-control.custom-select(name='patientgender')
+                                                                option(value='br' name='' selected ) CHOOSE GENDER
+                                                                option(value='cz' name='') Male
+                                                                option(value='de' name='') Female
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label MARITAL STATUS
+                                                            select#select-status.form-control.custom-select(name='patientmaritalstatus')
+                                                                option(value='br' name='' selected ) CHOOSE STATUS
+                                                                option(value='cz' name='') Single
+                                                                option(value='de' name='') Married
+                                                                option(value='de' name='') Widowed
+                                                .row
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label HOME PHONE
+                                                            input.form-control(type='text' name='patienthomephone' placeholder='Enter Patient Home-Phone')
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label CELL PHONE
+                                                            input.form-control(type='text' name='patientcellphone' placeholder='Enter Patient Cell-Phone')
+                                                .row
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label RACE
+                                                            select#select-race.form-control.custom-select(name='patientrace')
+                                                                option(value='br' name='' selected ) CHOOSE RACE
+                                                                option(value='cz' name='') Single
+                                                                option(value='de' name='') Married
+                                                                option(value='de' name='') Widowed
+                                                    .col-md-6
+                                                        .form-group
+                                                            label.form-label ETHINICITY
+                                                            select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                                option(value='br' name='' selected ) CHOOSE ETHINICITY
+                                                                option(value='cz' name='') Single
+                                                                option(value='de' name='') Married
+                                                                option(value='de' name='') Widowed
+                                                .row
+                                                    .col-md-4
+                                                        .form-group
+                                                            label.form-label PRIMARY LANGUAGE
+                                                            input.form-control(type='text' name='patientprimarylanguage' placeholder='Enter Patient Primary Language')
+                                                    .col-md-4
+                                                        .form-group
+                                                            label.form-label RELIGION
+                                                            input.form-control(type='text' name='patientreligion' placeholder='Enter Patient Religion')
+                                                    .col-md-4
+                                                        .form-group
+                                                            label.form-label DENOMINATION
+                                                            input.form-control(type='text' name='patientdenomination' placeholder='Enter Patient Detomination')

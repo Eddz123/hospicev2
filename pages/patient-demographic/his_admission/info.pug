@@ -1,0 +1,292 @@
+extends ../../../templates/layout
+
+block content
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='/0000019-009A') Home
+            li.breadcrumb-item.active(aria-current='page') His Admission
+        // End breadcrumb
+
+    // End page-header
+    .card
+        .card-header
+            .card-title HIS REPORT - ADMISSION
+        .card-body
+            .card
+                .card-body
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-danger.text-white
+                                tr
+                                    th.text-white.text-center FIRST NAME
+                                    th.text-white.text-center MIDDLE NAME
+                                    th.text-white.text-center LAST NAME
+                            tbody
+                                tr
+                                    td
+                                    td
+                                    td
+            .card
+                .card-body
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                            thead.bg-danger.text-white
+                                tr
+                                    th.text-white SECTION A
+                                    th.text-white ADMINISTRATIVE INFORMATION
+
+                            tbody
+                                tr
+                                    td.bg-info.text-white A0050. Type of Record
+                                    td.bg-info.text-white
+                                tr
+                                    td Code :
+                                    td
+                                tr
+                                    td.bg-info.text-white A0100. Facility Provider Numbers.
+                                    td.bg-info.text-white
+                                tr
+                                    td
+
+                                    td
+                                        | A. National Provider Identifier ( NPI ) :
+                                        br
+                                        | B. CMS Certification Number ( CCN ) :
+                                tr
+                                    td.bg-info.text-white  A0220. Admission Date
+
+                                    td.bg-info.text-white
+                                tr
+                                    td
+
+                                    td
+                                tr
+                                    td.bg-info.text-white  A0250. Reason for Record
+
+                                    td.bg-info.text-white
+                                tr
+                                    td  CODE :
+
+                                    td
+                                tr
+                                    td.bg-info.text-white  A0270. Discharge Date
+
+                                    td.bg-info.text-white
+                                tr
+                                    td
+
+                                    td
+                                tr
+                                    td.bg-info.text-white A0500. Legal Name of Patient
+
+                                    td.bg-info.text-white
+                                tr
+                                    td
+
+                                    td
+                                tr
+                                    td.bg-info.text-white A0600. Social Security and Medicare Numbers
+
+                                    td.bg-info.text-white
+                                tr
+                                    td
+
+                                    td
+                                        | A. Social Security Number :
+                                        br
+                                        | B. Medicare number / comparable railroad insurance number :
+                                tr
+                                    td.bg-info.text-white  A0700. Medicaid Number - Enter " + " if pending , " N " if not a Medicaid Recipient
+
+                                    td.bg-info.text-white
+                                tr
+                                    td
+
+                                    td
+                                tr
+                                    td.bg-info.text-white  A0800. Gender
+
+                                    td.bg-info.text-white
+                                tr
+                                    td  CODE :
+
+                                    td
+                                tr
+                                    td.bg-info.text-white  A0900. Birth Date
+
+                                    td.bg-info.text-white
+                                tr
+                                    td
+
+                                    td
+                                tr
+                                    td.bg-info.text-white  A2115. Reason for Discharge
+
+                                    td.bg-info.text-white
+                                tr
+                                    td CODE :
+
+                                    td
+
+            .card
+                .card-body
+                    .table-responsive
+                        table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+
+                            tbody
+                                tr
+                                    td.bg-info.text-white O5000. Level of Care in final 3 days
+                                    td.bg-info.text-white
+                                tr
+                                    td CODE :
+                                    td
+                                tr
+                                    td.bg-info.text-white O5010. Number of Hospice Visits in final 3 days
+                                    td.bg-info.text-white
+                                br
+
+                                tr
+                                    td(colspan=2)
+                                        .table-responsive
+                                            table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                                                thead.bg-danger.text-white
+                                                    tr
+                                                        th.text-white.text-center
+                                                        th.text-white.text-center VISITS ON DAY OF DEATH
+                                                        th.text-white.text-center VISIT ONE DAY PRIOR TO DEATH
+                                                        th.text-white.text-center VISITS TWO DAYS PRIOR TO DEATH
+                                                tbody
+                                                    tr
+                                                        td.text-center A. REGISTERED NURSE
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                    tr
+                                                        td.text-center B. PHYSICIAN
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                    tr
+                                                        td.text-center C. MEDICAL SOCIAL WORKER
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                    tr
+                                                        td.text-center D. CHAPLAIN OR SPIRITUAL COUNSELOR
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                    tr
+                                                        td.text-center E. LICENSED PRACTICAL NURSE
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                    tr
+                                                        td.text-center F. AIDE
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+
+
+
+                                tr
+                                    td.bg-info.text-white  O5020. Level of Care in final 7 days
+
+                                    td.bg-info.text-white
+                                tr
+                                    td CODE :
+
+                                    td
+                                tr
+                                    td.bg-info.text-white  O5030. Number of Hospice Visits in final 3 to 6 days prior to death
+
+                                    td.bg-info.text-white
+                                tr
+                                    td(colspan=2)
+                                        .table-responsive
+                                            table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                                                thead.bg-danger.text-white
+                                                    tr
+                                                        th.text-white.text-center
+                                                        th.text-white.text-center VISITS THREE DAYS PRIOR TO DEATH
+                                                        th.text-white.text-center VISIT FOUR DAYS PRIOR TO DEATH
+                                                        th.text-white.text-center VISIT FIVE DAYS PRIOR TO DEATH
+                                                        th.text-white.text-center VISIT SIX DAYS PRIOR TO DEATH
+                                                tbody
+                                                    tr
+                                                        td.text-center A. REGISTERED NURSE
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                    tr
+                                                        td.text-center B. PHYSICIAN
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                    tr
+                                                        td.text-center C. MEDICAL SOCIAL WORKER
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                    tr
+                                                        td.text-center D. CHAPLAIN OR SPIRITUAL COUNSELOR
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                    tr
+                                                        td.text-center E. LICENSED PRACTICAL NURSE
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                    tr
+                                                        td.text-center F. AIDE
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+                                                        td.text-center 0
+
+                                tr
+                                    td.bg-info.text-white  SIGNATURE
+
+                                    td.bg-info.text-white
+                                tr
+                                    td(colspan=2)
+                                tr
+                                    td.bg-info.text-white
+                                        | I CERTIFY THAT THE ACCOMPANYING INFORMATION ACCURATELY REFLECTS PATIENT ASSESSMENT INFORMATION FOR THIS PATIENT AND THAT I COLLECTED OR COORDINATED COLLECTION FOR THIS PATIENT AND THAT I
+                                        br
+                                        | COLLECTED OR COORDINATED COLLECTION OF THIS INFORMATION ON THE DATES SPECIFIED TO THE BEST OF MY KNOWLEDGE, THIS INFORMATION WAS COLLECTED IN ACCORDANCE WITH APPLICABLE MEDICARE AND
+                                        br
+                                        | MEDICAID TO THE BEST OF MY KNOWLEDGE , THIS INFORMATION WAS COLLECTED IN ACCORDANCE WITH APPLICABLE MEDICARE AND MEDICAID REQUIREMENTS I UNDERSTAND THAT REPORTING THIS INFORMATION IS USED
+                                        br
+                                        | AS A BASIS FOR PAYMENT FROM FEDERAL FUNDS. I FURTHER UNDERSTAND THAT FAILURE TO REPORT SUCH INFORMATION MAY LEAD TO A 2 PERCENTAGE POINT REDUCTION IN THE FISCAL YEAR PAYMENT DETERMINATION.
+                                        br
+                                        | I ALSO CERTIFY THAT I AM AUTHORIZED TO SUBMIT THIS INFORMATION BY THIS PROVIDER ON ITS BEHALF
+                                        br
+
+                                    td.bg-info.text-white
+
+                                    
+                                tr
+                                    td.bg-info.text-white
+                                        | I CERTIFY THAT THE ACCOMPANYING INFORMATION ACCURATELY REFLECTS PATIENT ASSESSMENT INFORMATION FOR THIS PATIENT AND THAT I COLLECTED OR COORDINATED COLLECTION FOR THIS PATIENT AND THAT I
+                                        br
+                                        | COLLECTED OR COORDINATED COLLECTION OF THIS INFORMATION ON THE DATES SPECIFIED TO THE BEST OF MY KNOWLEDGE, THIS INFORMATION WAS COLLECTED IN ACCORDANCE WITH APPLICABLE MEDICARE AND
+                                        br
+                                        | MEDICAID TO THE BEST OF MY KNOWLEDGE , THIS INFORMATION WAS COLLECTED IN ACCORDANCE WITH APPLICABLE MEDICARE AND MEDICAID REQUIREMENTS I UNDERSTAND THAT REPORTING THIS INFORMATION IS USED
+                                        br
+                                        | AS A BASIS FOR PAYMENT FROM FEDERAL FUNDS. I FURTHER UNDERSTAND THAT FAILURE TO REPORT SUCH INFORMATION MAY LEAD TO A 2 PERCENTAGE POINT REDUCTION IN THE FISCAL YEAR PAYMENT DETERMINATION.
+                                        br
+                                        | I ALSO CERTIFY THAT I AM AUTHORIZED TO SUBMIT THIS INFORMATION BY THIS PROVIDER ON ITS BEHALF
+                                        br
+
+                                    td.bg-info.text-white

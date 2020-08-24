@@ -1,0 +1,133 @@
+extends ../../../templates/layout
+
+block content
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='/nursing/assessment-list') Consent
+            li.breadcrumb-item.active(aria-current='page') Home
+        // End breadcrumb
+        .ml-auto
+            .input-group
+                a.btn.btn-dark.btn-lg(href='/nursing/assessment-form')
+                    i.fa.fa-save.mr-1.mt-1
+                    |  Save
+    // End page-header
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header.custom-header
+                    div
+                        h3.card-title File Uploader
+                        h6.card-subtitle ID NO :
+                .card-body
+                    input.dropify(type='file')
+
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header.custom-header
+                    div
+                        h3.card-title Consent
+                        h6.card-subtitle ID NO :
+                .card-body
+                    .table-responsive
+                        table.table.table-bordered.text-nowrap.mb-0
+
+                            tbody
+                                tr
+                                    td
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label Hospice Eval Order
+                                    td
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label Informed Consent
+                                    td
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label Election Of Hospice
+                                tr
+                                    td
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label POLSTR / DNR
+                                    td
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label Change Of Hospice ( If Applicable )
+                                    td
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label POA / Advance Directive
+                                tr
+
+                                    td
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label Bill Of Rights
+                                    td
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label Sent Bedside Charts
+                                    td
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label Family / PCG Declines CAHPS Survey
+                                tr
+                                    td
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label Family / PCG Declines Bereavement Letters / Support
+                                    td(colspan=2)
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label Patient / Spouse is a Veteran
+                                tr
+                                    td
+                                        .form-group
+                                            small#emailHelp.form-text CPR Preferrence ( DNR / Code Status ) ?
+                                            select#select-countries.form-control.custom-select(name='country')
+                                                option
+                                                option
+
+
+                                    td(colspan=2)
+                                        .form-inline.col-md-2.col-md-6
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-radios' value='option1' checked='')
+                                                    span.custom-control-label CPR Preferrence(DNR / Code Status) ?
+
+
+
+
+
+
+

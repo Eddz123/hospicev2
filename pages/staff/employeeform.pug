@@ -1,0 +1,568 @@
+extends ../../templates/layout
+
+block content
+    .container.content-area
+        .side-app
+            // page-header
+            .page-header
+                ol.breadcrumb
+                    // breadcrumb
+                    li.breadcrumb-item
+                        a(href='/staff') Home
+                    li.breadcrumb-item.active(aria-current='page') Staff
+                // End breadcrumb
+            // End page-header
+            .row
+                .col-xl-12.col-lg-12.col-md-12
+                    .card
+                        .card-body
+                            .panel.panel-primary
+                                .tab-menu-heading
+                                    .tabs-menu1
+                                        // Tabs
+                                        ul.nav.panel-tabs
+                                            li
+                                                a.active(href='#tab1' data-toggle='tab') ADD / UPDATE EMPLOYEE
+
+
+                                .panel-body.tabs-menu-body
+                                    .tab-content
+                                        #tab1.tab-pane.active
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+
+                                                            td.text-right
+                                                                a.btn.btn-app.btn-success.mr-2.mt-1.mb-1(href='#')
+                                                                    i.fa.fa-save
+                                                                    |  Save
+                                                                a.btn.btn-app.btn-danger.mr-2.mt-1.mb-1(href='/staff')
+                                                                    i.fa.fa-times
+                                                                    |  Cancel
+
+
+                                            br
+                                            br
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+                                                            td.bg-danger.text-white
+                                                                h4
+                                                                    strong &#x2776; PERSONNAL INFORMATION
+
+
+                                            br
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+                                                            td
+                                                                .row
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label FIRST NAME
+                                                                            input.form-control(type='text' name='empfirstname' placeholder='Enter Your First Name' value='' required)
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label MIDDLE NAME
+                                                                            input.form-control(type='text' name='empmiddlename' placeholder='Enter Your Middle Name' value='' required)
+
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label LAST NAME
+                                                                            input.form-control(type='text' name='emplastname' placeholder='Enter Your Last Name' value='' required)
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label SUFFIX ( eg. Jr,iv )
+                                                                            input.form-control(type='text' name='empsuffix' placeholder='Enter Your Suffix' value='' )
+                                                                .row
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label DATE OF BIRTH
+                                                                            .input-group
+                                                                                .input-group-prepend
+                                                                                    .input-group-text
+                                                                                        i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' name='empdateofbirth' required)
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label AGE
+                                                                            input.form-control(type='text' name='empage' placeholder='Enter Age' value='' required)
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label GENDER
+                                                                            select.custom-select
+                                                                                option(selected='') Choose Gender
+                                                                                option(value='Male' name='gender') Male
+                                                                                option(value='Female' name='gender') Female
+                                                                                option(value='Gay' name='gender') Gay
+                                                                                option(value='Transgender' name='gender') Trans-gender
+                                                                                option(value='Transsexual' name='gender') Transsexual
+                                                                    .col-md-3
+                                                                        .form-group
+                                                                            label.form-label MARITAL STATUS
+                                                                            select.custom-select
+                                                                                option(selected='') Choose Marital Status
+                                                                                option(value='Male' name='gender') Single
+                                                                                option(value='Female' name='gender') Married
+                                                                                option(value='Gay' name='gender') Widowed
+
+                                                                .row
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label STREET ADDRESS
+                                                                            input.form-control(type='text' name='empstreetaddress' placeholder='Enter Your Street Address' value='' required)
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label APARTMENT / UNIT #
+                                                                            input.form-control(type='text' name='empunitno' placeholder='Enter Your Unit #' value='' required)
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label CITY
+                                                                            input.form-control(type='text' name='empcity' placeholder='Enter Your City' value='' required)
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label STATE
+                                                                            input.form-control(type='text' name='empstate' placeholder='Enter Your State' value='' required)
+
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label ZIP CODE
+                                                                            input.form-control(type='text' name='empzipcode' placeholder='Enter Your Zip Code' value='' required)
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label HOME PHONE
+                                                                            input.form-control(type='text' name='emphomephone' placeholder='Enter Your Home Phone' value='' required)
+
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label ALTERNATE PHONE
+                                                                            input.form-control(type='text' name='empalternatephone' placeholder='Enter Your Alternate Phone' value='' required)
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label EMAIL ADDRESS 1
+                                                                            input.form-control(type='text' name='empemailaddress1' placeholder='Enter Your Email Address 1' value='' required)
+
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label EMAIL ADDRESS 2 ( OPTIONAL )
+                                                                            input.form-control(type='text' name='empemailaddress2' placeholder='Enter Your Email Address 2' value='')
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label SSN
+                                                                            input.form-control(type='text' name='empssn' placeholder='Enter Your SSN ' value='' required)
+
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label DRIVERS LICENSE NUMBER
+                                                                            input.form-control(type='text' name='empdriverslicense' placeholder='Enter Your Drivers License Number' value='')
+
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label CELLPHONE PROVIDE
+                                                                            input.form-control(type='text' name='empcellphoneprovide' placeholder='Enter Your Cellphone Provider' value='' required)
+
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label FAX NUMBER
+                                                                            input.form-control(type='text' name='empfaxnumber' placeholder='Enter Your Fax' value='')
+
+
+
+                                            br
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+                                                            td.bg-danger.text-white
+                                                                h4
+                                                                    strong &#x2776; PROFESSIONAL INFORMATION
+
+
+                                            br
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+                                                            td
+                                                                .row
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label JOB TITLE
+                                                                            input.form-control(type='text' name='empjobtitle' placeholder='Enter Your Job Title' value='' required)
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label DISCIPLINE
+                                                                            select.custom-select
+                                                                                option(selected='') CHOOSE DISCIPLINE
+                                                                                option(value='Male' name='ADMINISTRATOR') ADMINISTRATOR
+                                                                                option(value='Female' name='BC') BC
+                                                                                option(value='Gay' name='BSW') BSW
+                                                                                option(value='Gay' name='BSW') HA
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label PROFESSIONAL LICENSE
+                                                                            input.form-control(type='text' name='empprofessionallicense' placeholder='Enter Your Professional License' value='' required)
+
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label EMPLOYMENT DATE FROM
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' name='empemploymentdatefrom' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label EMPLOYMENT DATE TO
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' name='empemploymentdateto' required)
+                                                                .row
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label NPI ( FOR MD ONLY )
+                                                                            input.form-control(type='text' name='empnpi' placeholder='Enter Your NPI NUMBER' value='' required)
+                                                                    .col-md-6
+                                                                        .form-group
+                                                                            label.form-label VALID UNTIL
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' name='empvaliduntil' required)
+                                            br
+
+
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+                                                            td.bg-danger.text-white
+                                                                h4
+                                                                    strong &#x2776; ACCESS ACCOUNT
+
+
+                                            br
+
+                                            .table-responsive
+                                                table.table.table-bordered.text-nowrap.mb-0
+
+                                                    tbody
+                                                        tr
+                                                            td
+
+
+                                                                .row
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label EMAIL ADDRESS
+                                                                            input.form-control(type='text' name='empfirstname' placeholder='Enter Your EMAIL ADDRESS' value='' required)
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label CONFIRM EMAIL ADDRESS
+                                                                            input.form-control(type='text' name='empfirstname' placeholder='Enter Your EMAIL ADDRESS' value='' required)
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label ACCESS LEVEL
+                                                                            select.custom-select
+                                                                                option(selected='') CHOOSE TYPE
+                                                                                option(value='Male' name='ADMINISTRATOR') ADMINISTRATOR
+                                                                                option(value='Male' name='ADMINISTRATOR') ADMIN ASSISTANT
+                                                                                option(value='Male' name='ADMINISTRATOR') BC
+
+                                                                .row
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label USERNAME
+                                                                            input.form-control(type='text' name='empusername' placeholder='Enter Your Username' value='' required)
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label PASSWORD
+                                                                            input.form-control(type='text' name='emppassword1' placeholder='Enter Your Password' value='' required)
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label REPEAT PASSWORD
+                                                                            input.form-control(type='text' name='emppassword2' placeholder='Retype Your Password' value='' required)
+
+                                                                .row
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label STAFF TYPE
+                                                                            select.custom-select
+                                                                                option(selected='') CHOOSE TYPE
+                                                                                option(value='Male' name='ADMINISTRATOR') A - ADMINISTRATOR
+                                                                                option(value='Female' name='BC') C - CLINICAL
+                                                                                option(value='Gay' name='BSW') X - CONTRACTED STAFF
+                                                                                option(value='Gay' name='BSW') Y - REFERRAL SOURCE
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label STAFF STATUS
+                                                                            select.custom-select
+                                                                                option(selected='') CHOOSE STATUS
+                                                                                option(value='Male' name='ADMINISTRATOR') ACTIVE
+                                                                                option(value='Female' name='BC') INACTIVE
+                                                                    .col-md-4
+                                                                        .form-group
+                                                                            label.form-label LOGIN INITIALS
+                                                                            input.form-control(type='text' name='logininitials' value='' disabled)
+                                                                .row
+                                                                    .col-md-4.text-center
+                                                                        .form-group
+                                                                            label.form-label SCHEDULING
+                                                                        .form-group
+                                                                            .custom-control.custom-radio.custom-control-inline
+                                                                                input#schedulingcreate.custom-control-input(type='radio' name='schedulingcreate')
+                                                                                label.custom-control-label(for='schedulingcreate') CREATE
+                                                                            .custom-control.custom-radio.custom-control-inline
+                                                                                input#schedulingedit.custom-control-input(type='radio' name='schedulingedit')
+                                                                                label.custom-control-label(for='schedulingedit') EDIT
+                                                                            .custom-control.custom-radio.custom-control-inline
+                                                                                input#schedulingdelete.custom-control-input(type='radio' name='schedulingdelete')
+                                                                                label.custom-control-label(for='schedulingdelete') DELETE
+                                                                    .col-md-7.text-center
+                                                                        .form-group
+                                                                            label.form-label OTHER ACCESS LEVEL
+                                                                        .form-group
+                                                                            .custom-control.custom-radio.custom-control-inline
+                                                                                input#otheraccesslvlpdf.custom-control-input(type='radio' name='otheraccesslvlpdf')
+                                                                                label.custom-control-label(for='otheraccesslvlpdf') ALLOW PDF PRINT
+                                                                            .custom-control.custom-radio.custom-control-inline
+                                                                                input#otheraccesslvlfax.custom-control-input(type='radio' name='otheraccesslvlfax')
+                                                                                label.custom-control-label(for='otheraccesslvlfax') ALLOW FAXING
+                                                                            .custom-control.custom-radio.custom-control-inline
+                                                                                input#otheraccesslvlhr.custom-control-input(type='radio' name='otheraccesslvlhr')
+                                                                                label.custom-control-label(for='otheraccesslvlhr') ALLOW HUMAN RESOURCES
+                                                                            .custom-control.custom-radio.custom-control-inline
+                                                                                input#otheraccesslvlbillingstaff.custom-control-input(type='radio' name='otheraccesslvlbillingstaff')
+                                                                                label.custom-control-label(for='otheraccesslvlbillingstaff') ALLOW BILLING STAFF
+                                                                .row
+                                                                    .col-md-4
+
+                                                                    .col-md-7
+                                                                        .form-group
+                                                                            .custom-control.custom-radio.custom-control-inline
+                                                                                input#otheraccesslvlshownote.custom-control-input(type='radio' name='otheraccesslvlshownote')
+                                                                                label.custom-control-label(for='otheraccesslvlshownote') SHOW NOTE MODIFICATION
+                                                                            .custom-control.custom-radio.custom-control-inline
+                                                                                input#otheraccesslvlshowrx.custom-control-input(type='radio' name='otheraccesslvlshowrx')
+                                                                                label.custom-control-label(for='otheraccesslvlshowrx') SHOW RX MODIFICATION
+                                                                            .custom-control.custom-radio.custom-control-inline
+                                                                                input#otheraccesslvlallowqa.custom-control-input(type='radio' name='otheraccesslvlallowqa')
+                                                                                label.custom-control-label(for='otheraccesslvlallowqa') ALLOW QA
+                                                br
+
+
+
+                                                .table-responsive
+                                                    table.table.table-bordered.text-nowrap.mb-0
+
+                                                        tbody
+                                                            tr
+                                                                td.bg-danger.text-white
+                                                                    h4
+                                                                        strong &#x2776; LICENSE / DOCUMENT EXPIRATION
+
+
+                                                br
+
+                                                .table-responsive
+                                                    table.table.table-bordered.text-nowrap.mb-0
+
+                                                        tbody
+                                                            tr
+                                                                td
+                                                                    .row
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label TB TEST / CHEST XRAY VALID TILL
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label AUTO INSURANCE VALID TILL
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label CPR VALID TILL
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                    .row
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label PHYSICAL EXAM VALID TILL
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label LIABILITY INSURANCE VALID TILL
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label ANNUAL PERFORMANCE EVAL DUE ON
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                    .row
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label 90 PERFORMANCE EVAL DUE ON
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label I9 VERIFICATION DATE ( IF APPLICABLE )
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label BACKGROUND CHECK
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                    .row
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label LICENSE VERIFICATION DUE ON
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label DRIVER'S LIC VALID TILL
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label ANNUAL COMPETENCY DUE ON
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                    .row
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label INITIAL COMPETENCY DUE ON
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label GLUCOSE TEST DUE ON
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label HAND HYGIENE DUE ON
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                    .row
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label HEPATITIS B VACCINE
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label CHHA TEST DUE ON
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                        .col-md-4
+                                                                            .form-group
+                                                                                label.form-label INFLUENZA VACCINATION
+                                                                                .input-group
+                                                                                    .input-group-prepend
+                                                                                        .input-group-text
+                                                                                            i.fa.fa-calendar.tx-16.lh-0.op-6
+                                                                                    input.form-control.fc-datepicker(placeholder='MM - DD - YYYY' type='text' required)
+                                                                    .row
+                                                                        .col-md-12
+                                                                            .form-group.mb-0
+                                                                                label.form-label NOTE / COMMENT
+                                                                                textarea.form-control(name='employeecomments' rows='4' placeholder='ENTER COMMENTS HERE')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

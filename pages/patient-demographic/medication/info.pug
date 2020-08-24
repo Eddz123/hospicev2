@@ -1,0 +1,66 @@
+extends ../../../templates/layout
+
+block content
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='/0000019-009A') Home
+            li.breadcrumb-item.active(aria-current='page') Medication
+        // End breadcrumb
+        .ml-auto
+            .btn-list
+                a.btn.btn-facebook.text-white(type='button' href='/0000019-009A/Add-Update-Medication')
+                    i.fa.fa-plus.mr-2
+                    | Add New Medication
+
+    // End page-header
+    .card
+        .card-header
+            .card-title Medication List
+        .card-body
+            .table-responsive
+                table#example1.table.table-striped.table-bordered.text-nowrap
+                    thead
+                        tr
+
+                            th Action
+                            th Order Date
+                            th Start Date
+                            th Stop Date
+                            th Type
+                            th Item
+                            th Strength
+                            th Quantity
+                            th Dosage
+                            th Route
+                            th Frequency
+                            th Indication
+                            th Payer
+                            th Vendor
+                            
+                    tbody
+                        tr
+                            td
+                                a.btn.btn-sm.btn-danger(href='#')
+                                    i.si.si-eye
+                                    |  View Details
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+                            td
+
+
+
+

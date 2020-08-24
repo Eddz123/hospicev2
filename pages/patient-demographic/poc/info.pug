@@ -1,0 +1,58 @@
+extends ../../../templates/layout
+
+block content
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='/0000019-009A') Home
+            li.breadcrumb-item.active(aria-current='page') Poc Summary Assessment
+        // End breadcrumb
+        .ml-auto
+            .btn-list
+                a.btn.btn-facebook.text-white(type='button' href='/0000019-009A/add-poc-assessment')
+                    i.fa.fa-plus.mr-2
+                    | Add Poc Summary Assessment
+
+    // End page-header
+    .card
+        .card-header
+            .card-title Poc Summary
+        .card-body
+            .table-responsive
+                table#example3.table.table-striped.table-bordered.text-nowrap
+                    thead
+                        tr
+
+                            th Assessment Date
+                            th Time
+                            th Duration
+                            th Staff
+                            th Type
+                            th Status
+                            th Assessment
+                            th Action
+
+                    tbody
+                        tr
+
+                            td Tiger
+                            td Nixon
+                            td System Architect
+                            td Edinburgh
+                            td 61
+                            td 2011/04/25
+                            td $320,800
+                            td
+                                a.btn.btn-sm.btn-danger(href='#')
+                                    i.si.si-eye
+                                    |  View Details
+
+
+
+
+
+
+

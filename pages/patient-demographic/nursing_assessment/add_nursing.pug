@@ -1,0 +1,1368 @@
+extends ../../../templates/layout
+
+block content
+
+
+
+    // page-header
+    .page-header
+        ol.breadcrumb
+            // breadcrumb
+            li.breadcrumb-item
+                a(href='#') Nursing
+            li.breadcrumb-item.active(aria-current='page') Assessment
+        // End breadcrumb
+        .ml-auto
+            .input-group
+                a.btn.btn-success.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-plus
+                        |  Save Assessment
+                a.btn.btn-danger.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-trash
+                        |  Delete
+                a.btn.btn-primary.text-white.mr-2(href='/nursing/assessment-form')
+                    span
+                        i.fa.fa-backward
+                        |  Back
+    // End page-header
+
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title Attach Document
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-12
+                            .form-group
+                                input.dropify(type='file')
+
+
+        .col-xl-12.col-lg-12.col-md-12
+            .card
+                .card-header
+                    h3.card-title Assessment
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-4
+                            .form-group
+                                label.form-label Entered By :
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Type Of
+                                input.form-control(type='text' name='example-disabled-input')
+                            .form-group
+                                label.form-label Discipline
+                                input.form-control(type='text' name='example-disabled-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label Staff Assigned
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Visit
+                                input.form-control(type='text' name='example-disabled-input')
+                            .form-group
+                                label.form-label Time In
+                                input.form-control(type='text' name='example-disabled-input' )
+                        .col-md-4
+                            .form-group
+                                label.form-label Discipline
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Please Specify
+                                input.form-control(type='text' name='example-disabled-input')
+                            .form-group
+                                label.form-label Time Out
+                                input.form-control(type='text' name='example-disabled-input')
+                    .row
+                        .col-md-6
+                            .form-group
+                                label.form-label Reason For Assessment
+                                input.form-control(type='text' name='example-text-input')
+                        .col-md-6
+                            .form-group
+                                label.form-label Overall Duration
+                                input.form-control(type='text' name='example-disabled-input')
+                    .row
+                        .col-md-12
+                            .form-group
+
+                                button.btn.btn-app.btn-primary.btn-block(type='button') Import Baseline Data From Previous Assessment
+
+    .row
+        .col-xl-12.col-lg-12.col-md-12
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Pain Screening
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    fieldset.border.p-15
+                        legend.label.form-label &nbsp; Answer applicable question on Pain Assessment, even if no pain reported. ( Required for HIS )
+                        label.form-label Is The Patient Alert Oriented And Able to Verbalize Pain ?
+                            .form-inline.col-md-2.col-md-6
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Yes &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label No
+                        label.form-label Is The Patient Uncomportable Because Of Pain ?
+                            .form-inline.col-md-2.col-md-6
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Yes &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label No  &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Unwilling &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Unable
+                        .row
+                            .col-md-12
+                                .form-group
+
+                                    button.btn.btn-app.btn-info.btn-block(type='button') Open Pain Assessment
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Vitals And Measurements
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-4
+                            .form-group
+                                label.form-label Temperature
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Bp
+                                input.form-control(type='text' name='example-disabled-input')
+                            .form-inline.col-md-12.col-md-12
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Yes &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label No  &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Unwilling &nbsp;&nbsp;&nbsp;
+                        .col-md-4
+                            .form-group
+                                label.form-label Pulse
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Ht ( Inch )
+                                input.form-control(type='text' name='example-disabled-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label Resp
+                                input.form-control(type='text' name='example-text-input')
+                            .form-group
+                                label.form-label Wt ( Lbs )
+                                input.form-control(type='text' name='example-disabled-input')
+                    br
+                    .row
+                        .col-md-4
+                            .form-group
+                                label.form-label Mac ( Cm )
+                                input.form-control(type='text' name='example-text-input')
+                            .form-inline.col-md-12.col-md-12
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Left &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label Right  &nbsp;&nbsp;&nbsp;
+                        .col-md-4
+                            .form-group
+                                label.form-label BMI
+                                input.form-control(type='text' name='example-text-input')
+                        .col-md-4
+                            .form-group
+                                label.form-label O2 Sat
+                                input.form-control(type='text' name='example-text-input')
+                            .form-inline.col-md-12.col-md-12
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label RA &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label 2L  &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label 3L  &nbsp;&nbsp;&nbsp;
+                                .custom-controls-stacked
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(type='radio' name='example-radios' value='option1' checked='')
+                                        span.custom-control-label 4L +
+
+
+            .card.card-collapsed.myTab2
+
+                .card-header
+                    h3.card-title Communications & Other Factors
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    ul#myTab2.nav.nav-tabs(role='tablist')
+                        li.nav-item
+                            a#environmentalsafety-tab2.nav-link.active.show(data-toggle='tab' href='#environmentalsafety' role='tab' aria-controls='environmentalsafety' aria-selected='true') Environmental / Safety
+                        li.nav-item
+                            a#profile-tab2.nav-link(data-toggle='tab' href='#profile2' role='tab' aria-controls='profile' aria-selected='false') Mobility
+                        li.nav-item
+                            a#contact-tab2.nav-link(data-toggle='tab' href='#contact2' role='tab' aria-controls='contact' aria-selected='false') Adl Assessment
+                        li.nav-item
+                            a#dmedevice-tab2.nav-link(data-toggle='tab' href='#dmedevice' role='tab' aria-controls='dmedevice' aria-selected='false') Dme Device
+                        li.nav-item
+                            a#ivassessment-tab2.nav-link(data-toggle='tab' href='#ivassessment' role='tab' aria-controls='ivassessment' aria-selected='false') IV Assessment
+                    #myTab2Content.tab-content.tab-bordered
+                        #environmentalsafety.tab-pane.fade.active.show(role='tabpanel' aria-labelledby='environmentalsafety-tab2')
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+                                    thead
+                                        tr
+                                            th.wd-15p(colspan=3) ( If Any Checked, complete safety assessment addendum w/ comprehensive assessment )
+
+                                    tbody
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Alone At Night
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Alone During Day
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Insufficient Heat / Cooling
+
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Limited Lightning
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Oxygen In Use
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Limited Water
+
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Dangerous Neighborhood
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Medication ( Risk Of Error Or Diversion )
+                                            td
+
+                                                .form-group
+                                                    small#emailHelp.form-text If Other Kindly Specify Here :
+                                                    input.form-control(type='text' name='example-text-input')
+
+                        #profile2.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab2')
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+                                    thead
+                                        tr
+                                            th.wd-15p(colspan=3)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-radio
+                                                            input.custom-control-input(type='radio' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Ambulatory
+
+                                    tbody
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Cane
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Walker
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Wheelchair
+
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Stand By Assist
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Moderate Assist
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Maximum Assist
+
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox If wheel chair, are ramps available where needed ?
+
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-radio
+                                                            input.custom-control-input(type='radio' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Yes
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-radio
+                                                            input.custom-control-input(type='radio' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label No
+
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+                                    thead
+                                        tr
+                                            th.wd-15p(colspan=3)
+                                                .form-group
+                                                    small#emailHelp.form-text Endurance # of step before resting
+                                                    input.form-control(type='text' name='example-text-input')
+
+
+
+
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+                                    thead
+                                        tr
+                                            th.wd-15p(colspan=3)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-radio
+                                                            input.custom-control-input(type='radio' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Non - Ambulatory
+
+                                    tbody
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Bed Bound
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Bed Rest BRP
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Up As Tolerated
+
+                                        tr
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Maximum Assist
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Transfer Bed / Chair
+                                            td
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Exercise Prescribe
+
+                                        tr
+                                            td(colspan=3)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                            span.custom-control-label Range Of Motion
+
+
+
+
+
+                        #contact2.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab2')
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+                                    thead
+                                        tr
+                                            th.wd-15p.text-center(colspan=2)
+                                               | ( Dependence Scale: 0 – Independent, 1- Minimal / Supervision, 2 - Moderate, 3 – Maximal / Complete )
+
+
+                                    tbody
+
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Ambulation
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Toileting
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Transfer
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Dressing
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Feeding
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Bathing
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                        tr.text-center
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Total ADL score ( Possible 0 - 18 ) :
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+                                        tr.text-center
+                                            td(colspan=1)
+
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox Total number of activities with complete dependence ( 0 - 6 )
+
+                                            td(colspan=1)
+                                                .form-inline.col-md-12.col-md-12
+                                                    .custom-controls-stacked
+                                                        label.custom-control.custom-checkbox
+                                                            select.form-control.form-control-sm
+                                                                option
+                                                                option 0
+                                                                option 1
+                                                                option 2
+                                                                option 3
+
+
+
+                        #dmedevice.tab-pane.fade(role='tabpanel' aria-labelledby='dmedevice-tab2')
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+
+                                    tbody
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#airmatress.form-text Air Mattress
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#Bed.form-text Bed
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#Bedpan.form-text Bedpan
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#Eggcrate.form-text Eggcrate
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#Overbedtable.form-text Overbed Table
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#Cane.form-text Cane
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#Walker.form-text Walker
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#WheelChair.form-text WheelChair
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#showerchair.form-text Shower Chair
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#gerichair.form-text Geri - Chair / Recliner
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#hoyerlift.form-text Hoyer Lift
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#urinal.form-text Urinal
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#etank.form-text E - Tank
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#nebulizer.form-text Nebulizer
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#suctionmachine.form-text Suction Machine
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td
+                                                .form-group
+                                                    small#o2conc.form-text O2 Conc
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#commode.form-text Commode
+                                                    select.form-control.form-control-sm
+                                                        option
+                                                        option Has
+                                                        option Need
+                                            td(colspan=3)
+                                                .form-group
+                                                    small#specify.form-text If Others Kindly Specify Here
+                                                    input.form-control(type='text' name='example-text-input')
+
+
+                        #ivassessment.tab-pane.fade(role='tabpanel' aria-labelledby='ivassessment-tab2')
+                            .table-responsive
+                                table.table.table-bordered.table-vcenter.text-nowrap
+
+                                    tbody
+                                        tr
+                                            td
+                                                .form-group
+                                                    small#airmatress.form-text Type
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Date Of Insertion
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Flush Solution
+                                                    input.form-control(type='text' name='example-text-input')
+                                            td
+                                                .form-group
+                                                    small#airmatress.form-text Size
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Dressing Type
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Flush Frequency
+                                                    input.form-control(type='text' name='example-text-input')
+                                            td
+                                                .form-group
+                                                    small#airmatress.form-text Location
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Frequency Of Change
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    small#airmatress.form-text Other Site / Care
+                                                    input.form-control(type='text' name='example-text-input')
+                                            td
+                                                .form-group
+                                                    small#airmatress.form-text NEED
+                                                    input.form-control(type='text' name='example-text-input')
+                                                .form-group
+                                                    .input-group
+                                                        .col-md-6.col-md-6
+                                                            .custom-controls-stacked.text-center
+                                                                label.custom-control.custom-checkbox
+                                                                    input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                                    span.custom-control-label CONTINUES
+                                                        .col-md-6.col-md-6
+                                                            .custom-controls-stacked.text-center
+                                                                label.custom-control.custom-checkbox
+                                                                    input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1' checked='')
+                                                                    span.custom-control-label OTHER
+                                                .form-group
+                                                    small#airmatress.form-text PURPOSE
+                                                    textarea.form-control(name='example-textarea-input', rows='4', placeholder='text here..')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Update Change In Diagnosus / Comorbidities ( If Applicable )
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    table.table.card-table.table-vcenter.text-nowrap.table-nowrap
+                        thead.bg-info.text-white
+                            tr
+                                th.text-white EVIDENCED DISEASE LIKELY TO CONTRIBUTE TO LIFE EXPECTANCY OF 6 MONTHS OR LESS.
+                    br
+                    .row
+                        .col-md-12
+                            .form-group
+                                small.form-label PRIMARY DX
+                                input.form-control(type='text' name='example-text-input')
+                    .row
+                        .col-md-12
+                            .form-group
+                                small.form-label PRIMARY DISEASE
+                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                    option(value='br' name='' selected ) Choose One
+                                    option(value='br' name='' )
+                                    
+                    .row
+                        .col-md-12
+                            .form-group
+                                small.form-label SECONDARY DX ( RELATED )
+                                input.form-control(type='text' name='example-text-input')
+                    .row
+                        .col-md-12
+                            .form-group
+                                small.form-label COMORBIDITIES ( UNRELATED DX )
+                                input.form-control(type='text' name='example-text-input')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Kps / Pps / Fast / Nyha Score Effecting Adl ?
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .table-responsive
+                        table.table.table-bordered.table-vcenter.text-nowrap
+                            thead
+                                tr
+                                    th.wd-15p(colspan=2)
+                                        .form-inline.col-md-12.col-md-12
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                    span.custom-control-label NONE
+
+                            tbody
+                                tr
+                                    td
+                                        .form-group.col-md-12.col-md-12
+                                            label.form-label KPS
+                                            select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                option(value='br' name='' selected ) Choose One
+                                    td
+                                        .form-inline.col-md-12.col-md-12
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox DISABLED REQUIRES SPECIAL CARE AND ASSISTANCE
+
+
+                                tr
+                                    td
+                                        .form-group.col-md-12.col-md-12
+                                            label.form-label PPS
+                                            select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                option(value='br' name='' selected ) Choose One
+                                    td
+                                        .form-inline.col-md-12.col-md-12
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    | MAINLY IN BED, UNABLE TO DO ANY WORK, EXTENSIVE EVIDENCE OF DISEASE,
+                                                    br
+                                                    | CONSIDERABLE DEPENDANCE FOR CARE, NORMAL OR REDUCED INTAKE AND FULLY CONSCIOUS OR CONFUSED OR DROWSY
+
+                                tr
+                                    td
+                                        .form-group.col-md-12.col-md-12
+                                            label.form-label FAST
+                                            select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                option(value='br' name='' selected ) Choose One
+
+                                    td
+                                        .form-inline.col-md-12.col-md-12
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    | CANNOT SIT UP WITHOUT ASSISTANCE ( EG. THE INDIVIDUAL WILL FALL OVER IF THERE ARE NOT LATERAL RESTS ON THE CHAIR ).
+                                                
+                                    
+                                tr
+                                    td
+                                        .form-group.col-md-12.col-md-12
+                                            label.form-label NYHA
+                                            select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                option(value='br' name='' selected ) Choose One
+
+                                    td
+                                        .form-inline.col-md-12.col-md-12
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    | PATIENTS WITH CARDIAC DISEASE RESULTING IN INABILITY TO CARRY ON ANY PHYSICAL ACTIVITY WITHOUT DISCOMFORT,
+                                                    br
+                                                    | SYMPTOMS OF HEART FAILURE OR OF THE ANGINAL SYNDROME MAY BE PRESENT EVEN AT REST,
+                                                    br
+                                                    | IF ANY PHYSICAL ACTIVITY IS UNDERTAKEN, DISCOMFORT IS INCREASED.
+
+
+
+            .card.card-collapsed
+                .card-header
+                    h3.card-title Nature & Conditions of Terminal Illness / Lcd Eligibility
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .row
+                        .col-md-12
+                            .form-group
+                                .table-responsive
+                                    table.table.table-bordered.table-vcenter.text-nowrap
+                                        thead
+                                            tr
+                                                th
+                                                    .form-group
+                                                        small.form-label TERMINAL STAGE DETERMINATION FOR DISEASE TYPE
+                                                        select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                            option(value='none' selected) SELECT
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) AlS
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) ALZHEIMER'S
+                                                            option(value='CANCER' name='' ) CANCER
+                                                            option(value='DEMENTIA' name='' ) DEMENTIA
+                                                            option(value='DIABETIS' name='' ) DIABETIS
+                                                            option(value='DIGESTIVESYSTEM' name='' ) DIGESTIVE SYSTEM
+                                                            option(value='FTTDEBILITY' name='' ) FTT / DEBILITY ( NON SPECIFIC DISEASE )
+                                                            option(value='HEARTDISEASE' name='' ) HEART DISEASE
+                                                            option(value='HIVDISEASE' name='' ) HIV DISEASE
+                                                            option(value='KIDNEYDISEASE' name='' ) KIDNEY DISEASE
+                                                            option(value='LIVERDISEASE' name='' ) LIVER DISEASE
+                                                            option(value='NEURO' name='' ) NEURO (CVA MS, PARKINSON'S)
+                                                            option(value='PULMONARYDISEASE' name='' ) PULMONARY DISEASE
+                                                            option(value='RENALDISEASE' name='' ) RENAL DISEASE
+                                                            option(value='STROKEANDCOMA' name='' ) STROKE AND COMA
+
+                        .col-md-12
+                            .form-group
+                                .table-responsive
+                                    table.table.table-bordered.table-vcenter.text-nowrap
+                                        tbody
+                                            tr
+                                                td.bg-success
+                                                    .form-group
+                                                        small.form-label 1. DISEASE WITH METASIS AT PRESENTATION ( A MUST BE MET )
+                                                td
+                                            tr
+                                                td
+                                                    .form-group
+                                                        small.form-label A. HAS THE CANCER METASTASIZED AND IS UNTREATABLE AT PRESENTATION ?
+                                                td
+                                                    .form-group
+                                                        select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                            option(value='none' selected) SELECT
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) AlS
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) ALZHEIMER'S
+                                            tr
+                                                td.bg-success
+                                                    .form-group
+                                                        small.form-label 2. PROGRESSION OF CANCER FROM AN EARLIER STAGE OF DISEASE TO METASTIC DISEASE ( A OR B MUST BE MET )
+                                                td
+                                            tr
+                                                td
+                                                    .form-group
+                                                        small.form-label A. HAS THE CANCER METASTASIZED REGARDLESS OF THERAPHY  ?
+                                                td
+                                                    .form-group
+                                                        select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                            option(value='none' selected) SELECT
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) AlS
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) ALZHEIMER'S
+                                            tr
+                                                td
+                                                    .form-group
+                                                        small.form-label B. HAS PATIENT BEEN RULED OUT AS A CANDIDATE OR DECLINES FURTHER CURATIVE THERAPHY ?
+                                                td
+                                                    .form-group
+                                                        select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                            option(value='none' selected) SELECT
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) AlS
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) ALZHEIMER'S
+                                            tr
+                                                td.bg-success
+                                                    .form-group
+                                                        small.form-label 3. CERTAIN CANCERS WITH POOR PROGNOSIS ( ALL MUST BE MET )
+                                                td
+                                            tr
+                                                td
+                                                    .form-group
+                                                        small.form-label A. PATIENT HAS SUSPICIOUS LARGE TUMOR AND REFUSES DEFINITIVE DIAGNOSIS ?
+                                                td
+                                                    .form-group
+                                                        select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                            option(value='none' selected) SELECT
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                                            tr
+                                                td
+                                                    .form-group
+                                                        small.form-label B. PATIENT HAS DECLINED IN FUNCTIONAL STATUS ?
+                                                td
+                                                    .form-group
+                                                        select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                            option(value='none' selected) SELECT
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                                            tr
+                                                td
+                                                    .form-group
+                                                        small.form-label C. PATIENT HAS SIGNIFICANT UNINTENTIONAL WEIGHT LOSS ?
+                                                td
+                                                    .form-group
+                                                        select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                            option(value='none' selected) SELECT
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                                                            option(value='AUTOIMMUNEDISEASE' name='' ) NO
+
+                                            tr
+                                                td(colspan='2')
+                                                    .form-group
+                                                        input.form-control(type='text' name='example-text-input')
+
+
+
+                        //.col-md-12
+                        //    .form-group
+                        //        .table-responsive
+                        //            table.table.table-bordered.table-vcenter.text-nowrap
+                        //                tbody
+                        //                    tr
+                        //                        td.bg-success
+                        //                            .form-group
+                        //                                small.form-label 1. ADL ( ALL IN THIS SECTION SHOULD BE MET )
+                        //                        td
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label A. IS KARNOFSKY PERFORMANCE STATUS ( KPS < 70 ) ?
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity1.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label B. IS PALLIATIVE PERFORMANCE STATUS ( PPS < 70 ) ?
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity2.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label C. STAGE 7A OR BEYOND ACCORDING TO FUNCTIONAL ASSESSMENT STAGING SCALE ( FAST > 7A ) ?
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label D. UNABLE TO AMBULATE WITHOUT ASSISTANCE / DEPENDENT TO GET TO AND FROM SPECIFIC LOCATIONS ? ( AMBULATION = 3 )
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label E. UNABLE TO DRESS WITHOUT ASSISTANCE ( DRESSING = 3 )
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label F. UNABLE TO BATHE WITHOUT ASSISTANCE ? ( BATHING = 3 )
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label
+                        //                                    | G. URINARY AND FECAL INCONTINENCE IS INTERMITTENT OR CONSTANT / DEPENDENT ON CATHETER
+                        //                                    br
+                        //                                    |OR OSTOMY CARE ? ( INCONTINENCE > OR = 1 )
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label
+                        //                                    | H. IS UNABLE TO CONSISTENTLY HAVE MEANINGFULL VERBAL COMMUNICATIONS; UTTERS STEREOTYPHICAL
+                        //                                    br
+                        //                                    | PHRASES ONLY ; OR ABILITY TO SPEAK IS SIX OR FEWER INTELLIGIBLE WORDS ?
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //
+                        //
+                        //
+                        //                    tr
+                        //                        td.bg-success
+                        //                            .form-group
+                        //                                small.form-label 2. DOCUMENT HISTORY / PROGRESSION OF A LEAST ANY ONE OF THE FOLLOWING
+                        //                        td
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label A. ASPIRATION PNEUNOMONIA IN THE PAST 12 MONTHS ?
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label B. PYELONEPHRITIS IN PAST 12 MONTHS
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label C. SEPTICEMIA IN THE PAST 12 MONTHS ?
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label D. DECUBITIS ULCER STAGE 3 OR 4 IN THE PAST 12 MONTHS ?
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //
+                        //
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label E. RECURRENT FEVER EVEN AFTER ANTIBIOTICS IN THE PAST 12 MONTHS ?
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //
+                        //
+                        //                    tr
+                        //                        td
+                        //                            .form-group
+                        //                                small.form-label
+                        //                                    | F. INABILITY TO MAINTAIN SUFFICIENT FLUID AND CALORIE INTAKE WITH 10% WEIGHT LOSS DURING
+                        //                                    br
+                        //                                    | THE PREVIOUS SIX MONTHS OR SERUM ALBUMIN < 2.5 GM / DL ?
+                        //                        td
+                        //                            .form-group
+                        //                                select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                        //                                    option(value='none' selected) SELECT
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) YES
+                        //                                    option(value='AUTOIMMUNEDISEASE' name='' ) NO
+                        //
+                        //
+                        //
+                        //
+                        //
+                        //
+                        //                    tr
+                        //                        td(colspan='2')
+                        //                            .form-group
+                        //                                input.form-control(type='text' name='example-text-input')
+
+
+
+
+
+
+
+
+            .card.card-collapsed
+                .card-header
+                    h3.card-title BODY SYSTEM ( HEAD TO TOE )
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
+                    .table-responsive
+                        table.table.table-bordered.table-vcenter.text-nowrap
+                            thead
+                                tr
+                                    th.wd-15p(colspan=2)
+                                        .form-inline.col-md-12.col-md-12
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    input.custom-control-input(type='checkbox' name='example-checkbox1' value='option1')
+                                                    span.custom-control-label NONE
+
+                            tbody
+                                tr
+                                    td
+                                        .form-group.col-md-12.col-md-12
+                                            label.form-label KPS
+                                            select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                option(value='br' name='' selected ) Choose One
+                                    td
+                                        .form-inline.col-md-12.col-md-12
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox DISABLED REQUIRES SPECIAL CARE AND ASSISTANCE
+
+
+                                tr
+                                    td
+                                        .form-group.col-md-12.col-md-12
+                                            label.form-label PPS
+                                            select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                option(value='br' name='' selected ) Choose One
+                                    td
+                                        .form-inline.col-md-12.col-md-12
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    | MAINLY IN BED, UNABLE TO DO ANY WORK, EXTENSIVE EVIDENCE OF DISEASE,
+                                                    br
+                                                    | CONSIDERABLE DEPENDANCE FOR CARE, NORMAL OR REDUCED INTAKE AND FULLY CONSCIOUS OR CONFUSED OR DROWSY
+
+                                tr
+                                    td
+                                        .form-group.col-md-12.col-md-12
+                                            label.form-label FAST
+                                            select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                option(value='br' name='' selected ) Choose One
+
+                                    td
+                                        .form-inline.col-md-12.col-md-12
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    | CANNOT SIT UP WITHOUT ASSISTANCE ( EG. THE INDIVIDUAL WILL FALL OVER IF THERE ARE NOT LATERAL RESTS ON THE CHAIR ).
+
+
+                                tr
+                                    td
+                                        .form-group.col-md-12.col-md-12
+                                            label.form-label NYHA
+                                            select#select-ethinicity.form-control.custom-select(name='patientethinicity')
+                                                option(value='br' name='' selected ) Choose One
+
+                                    td
+                                        .form-inline.col-md-12.col-md-12
+                                            .custom-controls-stacked
+                                                label.custom-control.custom-checkbox
+                                                    | PATIENTS WITH CARDIAC DISEASE RESULTING IN INABILITY TO CARRY ON ANY PHYSICAL ACTIVITY WITHOUT DISCOMFORT,
+                                                    br
+                                                    | SYMPTOMS OF HEART FAILURE OR OF THE ANGINAL SYNDROME MAY BE PRESENT EVEN AT REST,
+                                                    br
+                                                    | IF ANY PHYSICAL ACTIVITY IS UNDERTAKEN, DISCOMFORT IS INCREASED.
+
+            .card.card-collapsed
+                .card-header
+                    h3.card-title BODY SYSTEM ( HEAD TO TOE )
+                    .card-options
+                        a.card-options-collapse(href='#' data-toggle='card-collapse')
+                            i.fe.fe-chevron-up
+                        a.card-options-remove(href='#' data-toggle='card-remove')
+                            i.fe.fe-x
+                .card-body
